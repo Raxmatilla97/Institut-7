@@ -24,7 +24,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::latest()->orderBy("created_at")->paginate(10);
+        $articles = Article::latest()->orderBy("created_at")->paginate(100);
 
         $articleStat = Article::get();
         //dd($users->getRoleNames());
@@ -44,7 +44,7 @@ class ArticleController extends Controller
 
 
 
-    return view('institut.backend.crud.yangiliklar-crud.articles-list', compact(
+    return view('inst.back.crud.yangiliklar.article-list', compact(
         'articleStat',
         'articles',        
         'articleStatActive',

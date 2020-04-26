@@ -15,8 +15,14 @@
 @endsection
 
 
-@section('content')
+{{-- @section('content')
      
      @include('inst.back.pages.content')
+
+@endsection --}}
+
+@section('customizer')
+     
+     @include('inst.back.pages.customizer')
 
 @endsection

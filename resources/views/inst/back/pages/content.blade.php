@@ -2,796 +2,690 @@
 @extends('layouts.back.sayt-app')
 
 @section('content')
-    <!-- ============================================================== -->
-                <!-- Stats box -->
-                <!-- ============================================================== -->
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+          <div class="content-header row">
+          </div>
+          <div class="content-body"><!-- Grouped multiple cards for statistics starts here -->
+  <div class="row grouped-multiple-statistics-card">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6 col-xl-3 col-sm-6 col-12">
+              <div class="d-flex align-items-start mb-sm-1 mb-xl-0 border-right-blue-grey border-right-lighten-5">
+                <span class="card-icon primary d-flex justify-content-center mr-3">
+                  <i class="icon p-1 icon-bar-chart customize-icon font-large-2 p-1"></i>
+                </span>
+                <div class="stats-amount mr-3">
+                  <h3 class="heading-text text-bold-600">$95k</h3>
+                  <p class="sub-heading">Revenue</p>
+                </div>
+                <span class="inc-dec-percentage">
+                  <small class="success"><i class="fa fa-long-arrow-up"></i> 5.2%</small>
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-6 col-xl-3 col-sm-6 col-12">
+              <div class="d-flex align-items-start mb-sm-1 mb-xl-0 border-right-blue-grey border-right-lighten-5">
+                <span class="card-icon danger d-flex justify-content-center mr-3">
+                  <i class="icon p-1 icon-pie-chart customize-icon font-large-2 p-1"></i>
+                </span>
+                <div class="stats-amount mr-3">
+                  <h3 class="heading-text text-bold-600">18.63%</h3>
+                  <p class="sub-heading">Growth Rate</p>
+                </div>
+                <span class="inc-dec-percentage">
+                  <small class="danger"><i class="fa fa-long-arrow-down"></i> 2.0%</small>
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-6 col-xl-3 col-sm-6 col-12">
+              <div class="d-flex align-items-start border-right-blue-grey border-right-lighten-5">
+                <span class="card-icon success d-flex justify-content-center mr-3">
+                  <i class="icon p-1 icon-graph customize-icon font-large-2 p-1"></i>
+                </span>
+                <div class="stats-amount mr-3">
+                  <h3 class="heading-text text-bold-600">$27k</h3>
+                  <p class="sub-heading">Sales</p>
+                </div>
+                <span class="inc-dec-percentage">
+                  <small class="success"><i class="fa fa-long-arrow-up"></i> 10.0%</small>
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-6 col-xl-3 col-sm-6 col-12">
+              <div class="d-flex align-items-start">
+                <span class="card-icon warning d-flex justify-content-center mr-3">
+                  <i class="icon p-1 icon-basket-loaded customize-icon font-large-2 p-1"></i>
+                </span>
+                <div class="stats-amount mr-3">
+                  <h3 class="heading-text text-bold-600">13700</h3>
+                  <p class="sub-heading">Orders</p>
+                </div>
+                <span class="inc-dec-percentage">
+                  <small class="danger"><i class="fa fa-long-arrow-down"></i> 13.6%</small>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Grouped multiple cards for statistics ends here -->
+  
+  <!-- Minimal modern charts for power consumption, region statistics and sales etc. starts here -->
+  <div class="row minimal-modern-charts">
+    <!-- power consumption chart -->
+    <div class="col-xxl-6 col-xl-8 col-lg-8 col-md-12 col-12 power-consumption-stats-chart">
+      <div class="card">
+        <div class="card-content pt-2 px-1">
+          <div class="row">
+            <div class="col-8 d-flex">
+              <div class="ml-1">
+                <h4 class="power-consumption-stats-title text-bold-500">Power consumption</h4>
+              </div>
+              <div class="ml-50 mr-50">
+                <p>(kWh/100km)</p>
+              </div>
+            </div>
+            <div class="col-4 d-flex justify-content-end pr-3">
+              <div class="dark-text">
+                <h5 class="power-consumption-active-tab text-bold-500">Week</h5>
+              </div>
+              <div class="light-text ml-2">
+                <h5>Month</h5>
+              </div>
+            </div>
+          </div>
+          <div id="spline-chart"></div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- tracking stats chart -->
+    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-12 tracking-stats-chart">
+      <div class="card chart-with-tabs">
+        <div class="card-content">
+          <ul class="nav nav-pills card-tabs mb-2 pl-2 border-bottom-blue-grey border-bottom-lighten-5" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link text-primary bg-transparent active px-0 mr-1 py-1" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Charts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary bg-transparent px-0 py-1" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Tracking</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="body-header pl-2">
+                <div class="d-flex">
+                  <h3 class="mr-2 body-header-title text-bold-600 mb-0">1,934</h3>
+                  <small class="success"><i class="fa fa-long-arrow-up"></i> +8.0%</small>
+                </div>
+                <div class="body-header-subtitle">
+                  <span class="text-muted">Sales</span>
+                </div>
+              </div>
+              <div id="product_sales_column_basic_chart"></div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <div class="tracking-tab-container px-2">
+                <div class="tracking-tab-content">
+                  <div class="top-content d-flex flex-wrap justify-content-start mt-2 pb-1 mb-2">
+                    <div class="tracking-heading-icon mr-2">
+                      <i class="icon icon-pie-chart"></i>
+                    </div>
+                    <div class="pb-75">
+                      <h5 class="tracking-tab-title mb-0 text-bold-600">Total Sales</h5>
+                      <small class="text-muted">Top selling products</small>
+                    </div>
+                  </div>
+                  <div class="bottom-content">
+                    <ul class="tracking-list list-group">
+                      <li class="list-group-item border py-1 px-0 d-flex justify-content-between align-items-center">
+                        <span class="tracking-task text-bold-600 text-left">Stack Admin</span>
+                        <span class="badge badge-pill badge-warning px-1 py-50">Medium</span>
+                      </li>
+                      <li class="list-group-item border py-1 px-0 d-flex justify-content-between align-items-center">
+                        <span class="tracking-task text-bold-600 text-left">Convex Admin</span>
+                        <span class="badge badge-pill badge-success px-1 py-50">High</span>
+                      </li>
+                      <li class="list-group-item border py-1 px-0 d-flex justify-content-between align-items-center">
+                        <span class="tracking-task text-bold-600 text-left">Frest Admin</span>
+                        <span class="badge badge-pill badge-warning px-1 py-50">Medium</span>
+                      </li>
+                      <li class="list-group-item border py-1 px-0 d-flex justify-content-between align-items-center">
+                        <span class="tracking-task text-bold-600 text-left">Material Admin</span>
+                        <span class="badge badge-pill badge-danger px-1 py-50">Low</span>
+                      </li>
+                      <li class="list-group-item border py-1 px-0 d-flex justify-content-between align-items-center">
+                        <span class="tracking-task text-bold-600 text-left">Vuexy Admin</span>
+                        <span class="badge badge-pill badge-success px-1 py-50">High</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- region stats chart -->
+    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-12 region-stats-chart">
+      <div class="card statistic-card">
+        <div class="card-content">
+          <div class="top-row statistics-card-title border-bottom-blue-grey border-bottom-lighten-5">
+            <div class="py-1 pl-2 primary">
+              <span class="mb-1">Region Statistics</span>
+            </div>
+          </div>
+          <div class="statistics-chart d-flex justify-content-center align-self-center">
+            <div id="sales_in_region_pie_donut"></div>
+          </div>
+          <div class="statistics-chart-data d-flex justify-content-center ml-auto mr-auto pb-50 mb-2">
+            <div class="collection mr-1">
+              <span class="bullet bullet-xs bullet-warning"></span>
+              <span class="font-weight-bold">26%</span>
+            </div>
+            <div class="collection mr-1">
+              <span class="bullet bullet-xs bullet-danger"></span>
+              <span class="font-weight-bold">44%</span>
+            </div>
+            <div class="collection mr-1">
+              <span class="bullet bullet-xs bullet-primary"></span>
+              <span class="font-weight-bold">28%</span>
+            </div>
+          </div>
+          <div class="statistic-card-footer d-flex">
+            <div class="column-data py-1 text-center border-top-blue-grey border-top-lighten-5 flex-grow-1 text-center border-right-blue-grey border-right-lighten-5">
+              <p class="font-large-1 mb-0">$6.9k</p>
+              <span>Revenue</span>
+            </div>
+            <div class="column-data py-1 flex-grow-1 text-center border-top-blue-grey border-top-lighten-5">
+              <p class="font-large-1 mb-0">25</p>
+              <span>Sales</span>
+            </div>
+            <div class="column-data py-1 flex-grow-1 text-center border-top-blue-grey border-top-lighten-5 border-left-blue-grey border-left-lighten-5">
+              <p class="font-large-1 mb-0">11</p>
+              <span>Products</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- latest update tracking chart-->
+    <div class="col-xxl-4 col-xl-8 col-lg-8 col-md-12 col-12 latest-update-tracking">
+      <div class="card">
+        <div class="card-header latest-update-heading d-flex justify-content-between">
+          <h4 class="latest-update-heading-title text-bold-500">Latest Update</h4>
+          <div class="dropdown update-year-menu pb-1">
+            <a class="bg-transparent dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2019</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">2018</a>
+              <a class="dropdown-item" href="#">2017</a>
+              <a class="dropdown-item" href="#">2016</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-content latest-update-tracking-list pt-0 pb-1 px-2 position-relative">
+          <ul class="list-group">
+            <li class="list-group-item pt-0 px-0 latest-updated-item border-0 d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <span class="list-group-item-icon d-inline mr-1">
+                  <i class="icon text-primary bg-light-primary icon-bag total-products-icon rounded-circle p-50"></i>
+                </span>
+                <div>
+                  <p class="mb-25 latest-update-item-name text-bold-600">Total Products</p>
+                  <small class="font-small-3">1.2k Products</small>
+                </div>
+              </div>
+              <span class="update-profit text-bold-600">$10.5k</span>
+            </li>
+            <li class="list-group-item px-0 latest-updated-item border-0 d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <span class="list-group-item-icon d-inline mr-1">
+                  <i class="icon icon-graph bg-light-info text-info total-sales-icon rounded-circle p-50"></i>
+                </span>
+                <div>
+                  <p class="mb-25 latest-update-item-name text-bold-600">Total Sales</p>
+                  <small class="font-small-3">39.2k Sales</small>
+                </div>
+              </div>
+              <span class="update-profit text-bold-600">26M</span>
+            </li>
+            <li class="list-group-item px-0 latest-updated-item border-0 d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <span class="list-group-item-icon d-inline mr-1">
+                  <i class="icon icon-bag bg-light-danger text-danger total-products-icon rounded-circle p-50"></i>
+                </span>
+                <div>
+                  <p class="mb-25 latest-update-item-name text-bold-600">Total Products</p>
+                  <small class="font-small-3">1.2k Products</small>
+                </div>
+              </div>
+              <span class="update-profit text-bold-600">$10.5k</span>
+            </li>
+            <li class="list-group-item px-0 latest-updated-item border-0 d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <div class="list-group-item-icon d-inline mr-1">
+                  <i class="icon icon-credit-card bg-light-primary text-primary total-revenue-icon rounded-circle p-50"></i>
+                </div>
+                <div>
+                  <p class="mb-25 latest-update-item-name text-bold-600">Total Revenue</p>
+                  <small class="font-small-3">45.5k New Revenue</small>
+                </div>
+              </div>
+              <span class="update-profit text-bold-600">15.6M</span>
+            </li>
+            <li class="list-group-item px-0 latest-updated-item border-0 d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <span class="list-group-item-icon d-inline mr-1">
+                  <i class="icon icon-graph bg-light-info text-info total-sales-icon rounded-circle p-50"></i>
+                </span>
+                <div>
+                  <p class="mb-25 latest-update-item-name text-bold-600">Total Sales</p>
+                  <small class="font-small-3">39.2k Sales</small>
+                </div>
+              </div>
+              <span class="update-profit text-bold-600">26M</span>
+            </li>
+            <li class="list-group-item px-0 latest-updated-item border-0 pb-0 d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <div class="list-group-item-icon d-inline mr-1">
+                  <i class="icon icon-credit-card bg-light-danger text-danger total-revenue-icon rounded-circle p-50"></i>
+                </div>
+                <div>
+                  <p class="mb-25 latest-update-item-name text-bold-600">Total Revenue</p>
+                  <small class="font-small-3">45.5k New Revenue</small>
+                </div>
+              </div>
+              <span class="update-profit text-bold-600">15.6M</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- info and time tracking chart -->
+    <div class="col-xxl-8 col-xl-12 col-lg-12 col-md-12 col-12">
+      <div class="card info-time-tracking">
+        <div class="card-content">
+          <div class="row">
+            <div class="col-12 pt-2 pb-2 border-bottom-blue-grey border-bottom-lighten-5">
+              <div class="info-time-tracking-title d-flex justify-content-between align-items-center">
+                <h4 class="pl-2 mb-0 title-info-time-heading text-bold-500">Information Time Tracking</h4>
+                <span class="pr-2">
+                  <i class="icon icon-settings"></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="info-time-tracking-content">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex no-block">
-                                    <div class="m-r-20 align-self-center"><span class="lstick m-r-20"></span><img src="{{ asset('admin/assets/images/icon/income.png') }}" alt="Income" /></div>
-                                    <div class="align-self-center">
-                                        <h6 class="text-muted m-t-10 m-b-0">Total Income</h6>
-                                        <h2 class="m-t-0">953,000</h2></div>
-                                </div>
-                            </div>
-                        </div>
+                  <div class="col-md-6 col-sm-12 border-right-blue-grey border-right-lighten-5">
+                    <div class="general-task-loading pr-2 pl-4 px-sm-4 px-md-2 py-md-2 d-flex justify-content-start">
+                      <div id="general_task_radial_bar_chart"></div>
+                      <div class="task-content d-flex flex-column align-items-start justify-content-center">
+                        <h5 class="font-weight-bold mt-2 mt-sm-0">General task loading</h5>
+                        <p class="leading-para">
+                          The system automatically detects the loading of your tasks. including sales and revenue.
+                        </p>
+                      </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex no-block">
-                                    <div class="m-r-20 align-self-center"><span class="lstick m-r-20"></span><img src="{{ asset('admin/assets/images/icon/expense.png') }}" alt="Income" /></div>
-                                    <div class="align-self-center">
-                                        <h6 class="text-muted m-t-10 m-b-0">Total Expense</h6>
-                                        <h2 class="m-t-0">236,000</h2></div>
-                                </div>
-                            </div>
-                        </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="pr-2 total-stats pl-4 px-sm-4 px-md-2 py-md-2 d-flex justify-content-start">
+                      <div id="info_tracking_total_stats"></div>
+                      <div
+                        class="pl-2 ml-50 stats-content d-flex flex-column align-items-start justify-content-center pr-2">
+                        <h5 class="font-weight-bold">Total Stats</h5>
+                        <p class="leading-para">Your criticaly anylyzed success data regarding revenue and sales for the
+                          last week.</p>
+                      </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex no-block">
-                                    <div class="m-r-20 align-self-center"><span class="lstick m-r-20"></span><img src="{{ asset('admin/assets/images/icon/assets.png') }}" alt="Income" /></div>
-                                    <div class="align-self-center">
-                                        <h6 class="text-muted m-t-10 m-b-0">Total Assets</h6>
-                                        <h2 class="m-t-0">987,563</h2></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex no-block">
-                                    <div class="m-r-20 align-self-center"><span class="lstick m-r-20"></span><img src="{{ asset('admin/assets/images/icon/staff.png') }}" alt="Income" /></div>
-                                    <div class="align-self-center">
-                                        <h6 class="text-muted m-t-10 m-b-0">Total Staff</h6>
-                                        <h2 class="m-t-0">987,563</h2></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- Sales overview chart -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-lg-9 col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex no-block">
-                                    <div>
-                                        <h3 class="card-title m-b-5"><span class="lstick"></span>Sales Overview </h3>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <select class="custom-select b-0">
-                                            <option selected="">January 2017</option>
-                                            <option value="1">February 2017</option>
-                                            <option value="2">March 2017</option>
-                                            <option value="3">April 2017</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-theme stats-bar">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-4">
-                                        <div class="p-20 active">
-                                            <h6 class="text-white">Total Sales</h6>
-                                            <h3 class="text-white m-b-0">$10,345</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4">
-                                        <div class="p-20">
-                                            <h6 class="text-white">This Month</h6>
-                                            <h3 class="text-white m-b-0">$7,589</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4">
-                                        <div class="p-20">
-                                            <h6 class="text-white">This Week</h6>
-                                            <h3 class="text-white m-b-0">$1,476</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="sales-overview2" class="p-relative" style="height:360px;"></div>
-                            </div>
-                        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Minimal modern charts for power consumption, region statistics and sales etc. starts here -->
+  
+  
+  
+  <!-- active users and my task timeline cards starts here -->
+  <div class="row match-height">
+      <!-- active users card -->
+      <div class="col-xl-8 col-lg-12">
+      <div class="card active-users">
+        <div class="card-header border-0">
+          <h4 class="card-title">Active Users</h4>
+          <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-content">
+          <div id="audience-list-scroll" class="table-responsive position-relative">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Available Data</th>
+                  <th>Downloads</th>
+                  <th>Status</th>
+                  <th>More</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-truncate">
+                    <div class="avatar avatar-md mr-1">
+                      <img class="rounded-circle" src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-11.png')}}"  alt="Generic placeholder image">
                     </div>
-                    <!-- ============================================================== -->
-                    <!-- visit charts-->
-                    <!-- ============================================================== -->
-                    <div class="col-lg-3 col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title"><span class="lstick"></span>Visit Separation</h4>
-                                <div id="visitor" style="height:290px; width:100%;"></div>
-                                <table class="table vm font-14">
-                                    <tr>
-                                        <td class="b-0">Mobile</td>
-                                        <td class="text-right font-medium b-0">38.5%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tablet</td>
-                                        <td class="text-right font-medium">30.8%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Desktop</td>
-                                        <td class="text-right font-medium">7.7%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Other</td>
-                                        <td class="text-right font-medium">23.1%</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
+                    <span class="text-truncate">Shwell Flintof</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>shwellFlint@gmail.com</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>450MB</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="progress my-75">
+                      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="20" aria-valuemin="20" aria-valuemax="100" style="width:55%">55%</div>
                     </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- Projects of the month -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex no-block">
-                                    <div>
-                                        <h4 class="card-title"><span class="lstick"></span>Projects of the Month</h4></div>
-                                    <div class="ml-auto">
-                                        <select class="custom-select b-0">
-                                            <option selected="">January 2017</option>
-                                            <option value="1">February 2017</option>
-                                            <option value="2">March 2017</option>
-                                            <option value="3">April 2017</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="table-responsive m-t-20">
-                                    <table class="table vm no-th-brd no-wrap pro-of-month">
-                                        <thead>
-                                            <tr>
-                                                <th colspan="2">Assigned</th>
-                                                <th>Name</th>
-                                                <th>Priority</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td style="width:50px;"><span class="round"><img src="{{ asset('admin/assets/images/users/1.jpg') }}" alt="user" width="50"></span></td>
-                                                <td>
-                                                    <h6>Sunil Joshi</h6><small class="text-muted">Web Designer</small></td>
-                                                <td>Elite Admin</td>
-                                                <td><span class="label label-success label-rounded">Low</span></td>
-                                            </tr>
-                                            <tr class="active">
-                                                <td><span class="round"><img src="{{ asset('admin/assets/images/users/2.jpg') }}" alt="user" width="50"></span></td>
-                                                <td>
-                                                    <h6>Andrew</h6><small class="text-muted">Project Manager</small></td>
-                                                <td>Real Homes</td>
-                                                <td><span class="label label-info label-rounded">Medium</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-success"><img src="{{ asset('admin/assets/images/users/3.jpg') }}" alt="user" width="50"></span></td>
-                                                <td>
-                                                    <h6>Bhavesh patel</h6><small class="text-muted">Developer</small></td>
-                                                <td>MedicalPro Theme</td>
-                                                <td><span class="label label-primary label-rounded">High</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-primary"><img src="{{ asset('admin/assets/images/users/4.jpg') }}" alt="user" width="50"></span></td>
-                                                <td>
-                                                    <h6>Nirav Joshi</h6><small class="text-muted">Frontend Eng</small></td>
-                                                <td>Elite Admin</td>
-                                                <td><span class="label label-danger label-rounded">Low</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-warning"><img src="{{ asset('admin/assets/images/users/5.jpg') }}" alt="user" width="50"></span></td>
-                                                <td>
-                                                    <h6>Micheal Doe</h6><small class="text-muted">Content Writer</small></td>
-                                                <td>Helping Hands</td>
-                                                <td><span class="label label-success label-rounded">High</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-danger"><img src="{{ asset('admin/assets/images/users/6.jpg') }}" alt="user" width="50"></span></td>
-                                                <td>
-                                                    <h6>Johnathan</h6><small class="text-muted">Graphic</small></td>
-                                                <td>Digital Agency</td>
-                                                <td><span class="label label-info label-rounded">High</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-primary"><img src="{{ asset('admin/assets/images/users/4.jpg') }}" alt="user" width="50"></span></td>
-                                                <td>
-                                                    <h6>Nirav Joshi</h6><small class="text-muted">Frontend Eng</small></td>
-                                                <td>Elite Admin</td>
-                                                <td><span class="label label-danger label-rounded">Low</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                  </td>
+                  <td class="align-middle">
+                    <span class="badge badge-success">Active</span>
+                  </td>                
+                  <td class="align-middle">
+                    <div class="dropdown">
+                      <span class="feather icon-more-vertical dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Subscription</a>
+                        <a class="dropdown-item" href="#">Extras</a>
+                        <a class="dropdown-item" href="#">Newslatter</a>
+                      </div>
                     </div>
-                    <!-- ============================================================== -->
-                    <!-- Activity widget find scss into widget folder-->
-                    <!-- ============================================================== -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <h4 class="card-title"><span class="lstick"></span>Activity</h4>
-                                    <!-- <span class="badge badge-success">9</span> -->
-                                    <div class="btn-group ml-auto m-t-10">
-                                        <a href="JavaScript:void(0)" class="icon-options-vertical link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="javascript:void(0)">Action</a>
-                                            <a class="dropdown-item" href="javascript:void(0)">Another action</a>
-                                            <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="activity-box">
-                                <div class="card-body">
-                                    <!-- Activity item-->
-                                    <div class="activity-item">
-                                        <div class="round m-r-20"><img src="{{ asset('admin/assets/images/users/2.jpg') }}" alt="user" width="50" /></div>
-                                        <div class="m-t-10">
-                                            <h5 class="m-b-0 font-medium">Mark Freeman <span class="text-muted font-14 m-l-10">| &nbsp; 6:30 PM</span></h5>
-                                            <h6 class="text-muted">uploaded this file </h6>
-                                            <table class="table vm b-0 m-b-0">
-                                                <tr>
-                                                    <td class="m-r-10 b-0"><img src="{{ asset('admin/assets/images/icon/zip.png') }}" alt="user" /></td>
-                                                    <td class="b-0">
-                                                        <h5 class="m-b-0 font-medium ">Homepage.zip</h5>
-                                                        <h6>54 MB</h6></td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <!-- Activity item-->
-                                    <!-- Activity item-->
-                                    <div class="activity-item">
-                                        <div class="round m-r-20"><img src="{{ asset('admin/assets/images/users/3.jpg') }}" alt="user" width="50" /></div>
-                                        <div class="m-t-10">
-                                            <h5 class="m-b-5 font-medium">Emma Smith <span class="text-muted font-14 m-l-10">| &nbsp; 6:30 PM</span></h5>
-                                            <h6 class="text-muted">joined projectname, and invited <a href="javascript:void(0)">@maxcage, @maxcage, @maxcage, @maxcage, @maxcage,+3</a></h6>
-                                            <span class="image-list m-t-20">
-                                                <a href="javascript:void(0)"><img src="{{ asset('admin/assets/images/users/1.jpg') }}" class="img-circle" alt="user" width="50"></a>
-                                                <a href="javascript:void(0)"><img src="{{ asset('admin/assets/images/users/2.jpg') }}" class="img-circle" alt="user" width="50"></a>
-                                                <a href="javascript:void(0)"><span class="round round-warning">C</span></a>
-                                            <a href="javascript:void(0)"><span class="round round-danger">D</span></a>
-                                            <a href="javascript:void(0)">+3</a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- Activity item-->
-                                    <!-- Activity item-->
-                                    <div class="activity-item">
-                                        <div class="round m-r-20"><img src="{{ asset('admin/assets/images/users/4.jpg') }}" alt="user" width="50" /></div>
-                                        <div class="m-t-10">
-                                            <h5 class="m-b-0 font-medium">David R. Jones  <span class="text-muted font-14 m-l-10">| &nbsp; 9:30 PM, July 13th</span></h5>
-                                            <h6 class="text-muted">uploaded this file </h6>
-                                            <span>
-                                                <a href="javascript:void(0)" class="m-r-10"><img src="{{ asset('admin/assets/images/big/img1.jpg') }}" alt="user" width="60"></a>
-                                                <a href="javascript:void(0)" class="m-r-10"><img src="{{ asset('admin/assets/images/big/img2.jpg') }}" alt="user" width="60"></a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- Activity item-->
-                                    <!-- Activity item-->
-                                    <div class="activity-item">
-                                        <div class="round m-r-20"><img src="{{ asset('admin/assets/images/users/6.jpg') }}" alt="user" width="50" /></div>
-                                        <div class="m-t-10">
-                                            <h5 class="m-b-5 font-medium">David R. Jones <span class="text-muted font-14 m-l-10">| &nbsp; 6:30 PM</span></h5>
-                                            <h6 class="text-muted">Commented on<a href="javascript:void(0)">Test Project</a></h6>
-                                            <p class="m-b-0">It has survived not only five centuries, but also the leap into unchanged.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Activity item-->
-                                </div>
-                            </div>
-                        </div>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">
+                      <div class="avatar avatar-md mr-1">
+                          <img class="rounded-circle" src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-14.png')}}"  alt="Generic placeholder image">
+                      </div>
+                      <span class="text-truncate">Ogasawara Katsumi</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>ogaats@hmail.com</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>457 MB</span>
+                  </td>
+                  <td class="align-middle">
+                      <div class="progress my-75">
+                          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="20" aria-valuemin="20" aria-valuemax="100" style="width:55%">55%</div>
+                      </div>
+                  </td>
+                  <td class="align-middle">
+                    <span class="badge badge-warning">Reported</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="dropdown">
+                      <span class="feather icon-more-vertical dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Subscription</a>
+                        <a class="dropdown-item" href="#">Extras</a>
+                        <a class="dropdown-item" href="#">Newslatter</a>
+                      </div>
                     </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- Blog and website visit -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-lg-4 col-xlg-3">
-                        <div class="card">
-                            <img class="card-img-top img-responsive" src="{{ asset('admin/assets/images/big/img1.jpg') }}" alt="Card image cap">
-                            <div class="card-body">
-                                <h3 class="font-normal">Business development of rules 2017</h3>
-                                <span class="label label-info label-rounded">Technology</span>
-                                <p class="m-b-0 m-t-20">Titudin venenatis ipsum aciat. Vestibulum ullamcorper quam. nenatis ipsum ac feugiat. Ibulum ullamcorper</p>
-                                <div class="d-flex m-t-20">
-                                    <button class="btn p-l-0 btn-link ">Read more</button>
-                                    <div class="ml-auto align-self-center">
-                                        <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart-o"></i></a>
-                                        <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-share-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">
+                      <div class="avatar avatar-md mr-1">
+                          <img class="rounded-circle" src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-15.png')}}"  alt="Generic placeholder image">
+                      </div>
+                      <span class="text-truncate">Stepan Assonov</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>stepan23@hmail.com</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>231 MB</span>
+                  </td>
+                  <td class="align-middle">
+                      <div class="progress my-75">
+                          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="20" aria-valuemin="20" aria-valuemax="100" style="width:65%">65%</div>
+                      </div>
+                  </td>
+                  <td class="align-middle">
+                    <span class="badge badge-danger">Block</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="dropdown">
+                      <span class="feather icon-more-vertical dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Subscription</a>
+                        <a class="dropdown-item" href="#">Extras</a>
+                        <a class="dropdown-item" href="#">Newslatter</a>
+                      </div>
                     </div>
-                    <div class="col-lg-8 col-xlg-9">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <h4 class="card-title"><span class="lstick"></span>Website Visit</h4>
-                                    <ul class="list-inline m-b-0 ml-auto">
-                                        <li>
-                                            <h6 class="text-muted text-success"><i class="fa fa-circle font-10 m-r-10 "></i>Site A view</h6> </li>
-                                        <li>
-                                            <h6 class="text-muted text-info"><i class="fa fa-circle font-10 m-r-10"></i>Site B view</h6> </li>
-                                    </ul>
-                                </div>
-                                <div class="text-center m-t-30">
-                                    <div class="btn-group " role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-sm btn-secondary">PAGEVIEWS</button>
-                                        <button type="button" class="btn btn-sm btn-secondary">REFERRALS</button>
-                                    </div>
-                                </div>
-                                <div class="website-visitor p-relative m-t-30" style="width:100%;"></div>
-                            </div>
-                        </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">
+                      <div class="avatar avatar-md mr-1">
+                          <img class="rounded-circle" src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-4.png')}}"  alt="Generic placeholder image">
+                      </div>
+                      <span class="text-truncate">Mbe Tshinguta</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>tshinguta@hmail.com</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>723 MB</span>
+                  </td>
+                  <td class="align-middle">
+                      <div class="progress my-75">
+                          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="20" aria-valuemin="20" aria-valuemax="100" style="width:78%">78%</div>
+                      </div>
+                  </td>
+                  <td class="align-middle">
+                    <span class="badge badge-success">Active</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="dropdown">
+                      <span class="feather icon-more-vertical dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Subscription</a>
+                        <a class="dropdown-item" href="#">Extras</a>
+                        <a class="dropdown-item" href="#">Newslatter</a>
+                      </div>
                     </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- Twitter facebook and mail boxes -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card bg-info text-white">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="stats">
-                                        <h1 class="text-white">3257+</h1>
-                                        <h6 class="text-white">Twitter Followers</h6>
-                                        <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14">Check list</button>
-                                    </div>
-                                    <div class="stats-icon text-right ml-auto"><i class="fab fa-twitter display-5 op-3 text-dark"></i></div>
-                                </div>
-                            </div>
-                        </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">
+                      <div class="avatar avatar-md mr-1">
+                          <img class="rounded-circle" src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-11.png')}}"  alt="Generic placeholder image">
+                      </div>
+                      <span class="text-truncate">Marco Alves</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>maralv@dmail.com</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>120 MB</span>
+                  </td>
+                  <td class="align-middle">
+                      <div class="progress my-75">
+                          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="20" aria-valuemin="20" aria-valuemax="100" style="width:51%">51%</div>
+                      </div>
+                  </td>
+                  <td class="align-middle">
+                    <span class="badge badge-warning">Reported</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="dropdown">
+                      <span class="feather icon-more-vertical dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Subscription</a>
+                        <a class="dropdown-item" href="#">Extras</a>
+                        <a class="dropdown-item" href="#">Newslatter</a>
+                      </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card bg-primary text-white">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="stats">
-                                        <h1 class="text-white">6509+</h1>
-                                        <h6 class="text-white">Facebook Likes</h6>
-                                        <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14">Check list</button>
-                                    </div>
-                                    <div class="stats-icon text-right ml-auto"><i class="fab fa-facebook-f display-5 op-3 text-dark"></i></div>
-                                </div>
-                            </div>
-                        </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-truncate">
+                      <div class="avatar avatar-md mr-1">
+                          <img class="rounded-circle" src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-19.png')}}"  alt="Generic placeholder image">
+                      </div>
+                      <span class="text-truncate">Lucas Pacheco</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>pacheco@hmail.com</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>532 MB</span>
+                  </td>
+                  <td class="align-middle">
+                      <div class="progress my-75">
+                          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="20" aria-valuemin="20" aria-valuemax="100" style="width:47%">47%</div>
+                      </div>
+                  </td>
+                  <td class="align-middle">
+                    <span class="badge badge-danger">Blocked</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="dropdown">
+                      <span class="feather icon-more-vertical dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Subscription</a>
+                        <a class="dropdown-item" href="#">Extras</a>
+                        <a class="dropdown-item" href="#">Newslatter</a>
+                      </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card bg-success text-white">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="stats">
-                                        <h1 class="text-white">9062+</h1>
-                                        <h6 class="text-white">Subscribe</h6>
-                                        <button class="btn btn-rounded btn-outline btn-light m-t-10 font-14">Check list</button>
-                                    </div>
-                                    <div class="stats-icon text-right ml-auto"><i class="fa fa-envelope display-5 op-3 text-dark"></i></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- Tod do and profile -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-lg-6 col-xlg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div>
-                                        <h4 class="card-title"><span class="lstick"></span>To Do list</h4>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <button class="pull-right btn btn-circle btn-success" data-toggle="modal" data-target="#myModal"><i class="ti-plus"></i></button>
-                                    </div>
-                                </div>
-                                <!-- ============================================================== -->
-                                <!-- To do list widgets -->
-                                <!-- ============================================================== -->
-                                <div class="to-do-widget m-t-20">
-                                    <!-- .modal for add task -->
-                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title">Add Task</h4>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <label>Task name</label>
-                                                            <input type="text" class="form-control" placeholder="Enter Task Name"> </div>
-                                                        <div class="form-group">
-                                                            <label>Assign to</label>
-                                                            <select class="custom-select form-control pull-right">
-                                                                <option selected="">Sachin</option>
-                                                                <option value="1">Sehwag</option>
-                                                                <option value="2">Pritam</option>
-                                                                <option value="3">Alia</option>
-                                                                <option value="4">Varun</option>
-                                                            </select>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-success" data-dismiss="modal">Submit</button>
-                                                </div>
-                                            </div>
-                                            <!-- /.modal-content -->
-                                        </div>
-                                        <!-- /.modal-dialog -->
-                                    </div>
-                                    <!-- /.modal -->
-                                    <ul class="list-task todo-list list-group m-b-0" data-role="tasklist">
-                                        <li class="list-group-item" data-role="task">
-                                            <div class="checkbox checkbox-info m-b-10">
-                                                <input type="checkbox" id="inputSchedule" name="inputCheckboxesSchedule">
-                                                <label for="inputSchedule" class=""> <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</span> <span class="label label-rounded label-danger pull-right">Today</span></label>
-                                            </div>
-                                            <ul class="assignedto">
-                                                <li><img src="{{ asset('admin/assets/images/users/1.jpg') }}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Steave"></li>
-                                                <li><img src="{{ asset('admin/assets/images/users/2.jpg') }}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Jessica"></li>
-                                                <li><img src="{{ asset('admin/assets/images/users/3.jpg') }}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
-                                                <li><img src="{{ asset('admin/assets/images/users/4.jpg') }}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina"></li>
-                                            </ul>
-                                        </li>
-                                        <li class="list-group-item" data-role="task">
-                                            <div class="checkbox checkbox-info">
-                                                <input type="checkbox" id="inputBook" name="inputCheckboxesBook">
-                                                <label for="inputBook" class=""> <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</span><span class="label label-primary label-rounded pull-right">1 week </span> </label>
-                                            </div>
-                                            <div class="item-date"> 26 jun 2017</div>
-                                        </li>
-                                        <li class="list-group-item" data-role="task">
-                                            <div class="checkbox checkbox-info">
-                                                <input type="checkbox" id="inputCall" name="inputCheckboxesCall">
-                                                <label for="inputCall" class=""> <span>Give Purchase report to</span> <span class="label label-info label-rounded pull-right">Yesterday</span> </label>
-                                            </div>
-                                            <ul class="assignedto">
-                                                <li><img src="{{ asset('admin/assets/images/users/3.jpg') }}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
-                                                <li><img src="{{ asset('admin/assets/images/users/4.jpg') }}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina"></li>
-                                            </ul>
-                                        </li>
-                                        <li class="list-group-item" data-role="task">
-                                            <div class="checkbox checkbox-info">
-                                                <input type="checkbox" id="inputForward" name="inputCheckboxesForward">
-                                                <label for="inputForward" class=""> <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</span> <span class="label label-warning label-rounded pull-right">2 weeks</span> </label>
-                                            </div>
-                                            <div class="item-date"> 26 jun 2017</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Little Profile widget-->
-                    <div class="col-lg-6 col-xlg-4">
-                        <div class="card">
-                            <div class="card-body little-profile text-center">
-                                <div class="pro-img m-t-20"><img src="{{ asset('admin/assets/images/users/4.jpg') }}" alt="user"></div>
-                                <h3 class="m-b-0">Mark J. Freeman</h3>
-                                <h6 class="text-muted">Web Designer</h6>
-                                <ul class="list-inline soc-pro m-t-30">
-                                    <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="fab fa-facebook-square"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="fab fa-google-plus-g"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="fab fa-youtube"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="text-center bg-light">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6  p-20 b-r">
-                                        <h4 class="m-b-0 font-medium">35000</h4><small>Followers</small></div>
-                                    <div class="col-lg-6 col-md-6  p-20">
-                                        <h4 class="m-b-0 font-medium">180</h4><small>Following</small></div>
-                                </div>
-                            </div>
-                            <div class="card-body text-center">
-                                <a href="javascript:void(0)" class="m-t-10 m-b-20 waves-effect waves-dark btn btn-success btn-md btn-rounded">Follow me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Little Profile widget-->
-                </div>
-                <!-- ============================================================== -->
-                <!-- My contct and feed -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- contact -->
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <h4 class="card-title"><span class="lstick"></span>My Contact</h4>
-                                    <div class="btn-group ml-auto m-t-10">
-                                        <a href="JavaScript:void(0)" class="icon-options-vertical link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="javascript:void(0)">Action</a>
-                                            <a class="dropdown-item" href="javascript:void(0)">Another action</a>
-                                            <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="message-box contact-box">
-                                    <div class="message-widget contact-widget">
-                                        <!-- Message -->
-                                        <a href="index2.html#">
-                                            <div class="user-img"> <img src="{{ asset('admin/assets/images/users/1.jpg') }}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Pavan kumar</h5> <span class="mail-desc"><span class="__cf_email__" data-cfemail="9cf5f2faf3dcebeefdececf5e4f9f0b2fff3f1">[email&#160;protected]</span></span></div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="index2.html#">
-                                            <div class="user-img"> <img src="{{ asset('admin/assets/images/users/2.jpg') }}" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Sonu Nigam</h5> <span class="mail-desc"><span class="__cf_email__" data-cfemail="5c2c3d3139303d6d65646b1c3b313d3530723f3331">[email&#160;protected]</span></span></div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="index2.html#">
-                                            <div class="user-img"> <span class="round">A</span> <span class="profile-status away pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Arijit Sinh</h5> <span class="mail-desc"><span class="__cf_email__" data-cfemail="650617100c160054575c5d4b030c15090c15250208040c094b060a08">[email&#160;protected]</span></span></div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="index2.html#">
-                                            <div class="user-img"> <img src="{{ asset('admin/assets/images/users/4.jpg') }}" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Pavan kumar</h5> <span class="mail-desc"><span class="__cf_email__" data-cfemail="c6ada7b286a1aba7afaae8a5a9ab">[email&#160;protected]</span></span></div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="index2.html#">
-                                            <div class="user-img"> <img src="{{ asset('admin/assets/images/users/5.jpg') }}" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Andrew</h5> <span class="mail-desc"><span class="__cf_email__" data-cfemail="f5949b91b59298949c99db969a98">[email&#160;protected]</span></span></div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="index2.html#">
-                                            <div class="user-img"> <img src="{{ asset('admin/assets/images/users/6.jpg') }}" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Jonathan Jones</h5> <span class="mail-desc"><span class="__cf_email__" data-cfemail="8ee4e4cee9e3efe7e2a0ede1e3">[email&#160;protected]</span></span></div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- !contact -->
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title"><span class="lstick"></span> Feeds</h4>
-                                <ul class="feeds">
-                                    <li>
-                                        <div class="bg-light-info"><i class="far fa-bell"></i></div> You have 4 pending tasks. <span class="text-muted">Just Now</span></li>
-                                    <li>
-                                        <div class="bg-light-success"><i class="ti-server"></i></div> Server #1 overloaded.<span class="text-muted">2 Hours ago</span></li>
-                                    <li>
-                                        <div class="bg-light-warning"><i class="ti-shopping-cart"></i></div> New order received.<span class="text-muted">31 May</span></li>
-                                    <li>
-                                        <div class="bg-light-danger"><i class="ti-user"></i></div> New user registered.<span class="text-muted">30 May</span></li>
-                                    <li>
-                                        <div class="bg-light-inverse"><i class="far fa-bell"></i></div> New Version just arrived. <span class="text-muted">27 May</span></li>
-                                    <li>
-                                        <div class="bg-light-danger"><i class="ti-user"></i></div> New user registered.<span class="text-muted">30 May</span></li>
-                                    <li>
-                                        <div class="bg-light-inverse"><i class="far fa-bell"></i></div> New Version just arrived. <span class="text-muted">27 May</span></li>
-                                    <li>
-                                        <div class="bg-light-primary"><i class="ti-settings"></i></div> You have 4 pending tasks. <span class="text-muted">27 May</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- Comment and chat -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title"><span class="lstick"></span>Recent Comments</h4>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- Comment widgets -->
-                            <!-- ============================================================== -->
-                            <div class="comment-widgets">
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row">
-                                    <div class="p-2"><span class="round"><img src="{{ asset('admin/assets/images/users/1.jpg') }}" alt="user" width="50"></span></div>
-                                    <div class="comment-text w-100">
-                                        <h5>James Anderson</h5>
-                                        <p class="m-b-5">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has beenorem Ipsum is simply dummy text of the printing and type setting industry.</p>
-                                        <div class="comment-footer"> <span class="text-muted pull-right">April 14, 2016</span> <span class="label label-rounded label-info">Pending</span> <span class="action-icons">
-                                                    <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                    <a href="javascript:void(0)"><i class="ti-check"></i></a>
-                                                    <a href="javascript:void(0)"><i class="ti-heart"></i></a>    
-                                                </span> </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row active">
-                                    <div class="p-2"><span class="round"><img src="{{ asset('admin/assets/images/users/2.jpg') }}" alt="user" width="50"></span></div>
-                                    <div class="comment-text active w-100">
-                                        <h5>Michael Jorden</h5>
-                                        <p class="m-b-5">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has beenorem Ipsum is simply dummy text of the printing and type setting industry..</p>
-                                        <div class="comment-footer "> <span class="text-muted pull-right">April 14, 2016</span> <span class="label label-success label-rounded">Approved</span> <span class="action-icons active">
-                                                    <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                    <a href="javascript:void(0)"><i class="icon-close"></i></a>
-                                                    <a href="javascript:void(0)"><i class="ti-heart text-danger"></i></a>    
-                                                </span> </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row">
-                                    <div class="p-2"><span class="round"><img src="{{ asset('admin/assets/images/users/3.jpg') }}" alt="user" width="50"></span></div>
-                                    <div class="comment-text w-100">
-                                        <h5>Johnathan Doeting</h5>
-                                        <p class="m-b-5">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has beenorem Ipsum is simply dummy text of the printing and type setting industry.</p>
-                                        <div class="comment-footer"> <span class="text-muted pull-right">April 14, 2016</span> <span class="label label-rounded label-danger">Rejected</span> <span class="action-icons">
-                                                    <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                                    <a href="javascript:void(0)"><i class="ti-check"></i></a>
-                                                    <a href="javascript:void(0)"><i class="ti-heart"></i></a>    
-                                                </span> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title"><span class="lstick"></span>Recent Chats</h4>
-                                <div class="chat-box">
-                                    <!--chat Row -->
-                                    <ul class="chat-list">
-                                        <!--chat Row -->
-                                        <li>
-                                            <div class="chat-img"><img src="{{ asset('admin/assets/images/users/1.jpg') }}" alt="user" /></div>
-                                            <div class="chat-content">
-                                                <h5>James Anderson</h5>
-                                                <div class="box bg-light-info">Lorem Ipsum is simply dummy text of the printing & type setting industry.</div>
-                                            </div>
-                                            <div class="chat-time">10:56 am</div>
-                                        </li>
-                                        <!--chat Row -->
-                                        <li>
-                                            <div class="chat-img"><img src="{{ asset('admin/assets/images/users/2.jpg') }}" alt="user" /></div>
-                                            <div class="chat-content">
-                                                <h5>Bianca Doe</h5>
-                                                <div class="box bg-light-info">It’s Great opportunity to work.</div>
-                                            </div>
-                                            <div class="chat-time">10:57 am</div>
-                                        </li>
-                                        <!--chat Row -->
-                                        <li class="odd">
-                                            <div class="chat-content">
-                                                <div class="box bg-light-inverse">I would love to join the team.</div>
-                                                <br/>
-                                            </div>
-                                            <div class="chat-time">10:58 am</div>
-                                        </li>
-                                        <!--chat Row -->
-                                        <li class="odd">
-                                            <div class="chat-content">
-                                                <div class="box bg-light-inverse">Whats budget of the new project.</div>
-                                                <br/>
-                                            </div>
-                                            <div class="chat-time">10:59 am</div>
-                                        </li>
-                                        <!--chat Row -->
-                                        <li>
-                                            <div class="chat-img"><img src="{{ asset('admin/assets/images/users/3.jpg') }}" alt="user" /></div>
-                                            <div class="chat-content">
-                                                <h5>Angelina Rhodes</h5>
-                                                <div class="box bg-light-info">Well we have good budget for the project</div>
-                                            </div>
-                                            <div class="chat-time">11:00 am</div>
-                                        </li>
-                                        <!--chat Row -->
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-body b-t">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <textarea placeholder="Type your message here" class="form-control b-0"></textarea>
-                                    </div>
-                                    <div class="col-4 text-right">
-                                        <button type="button" class="btn btn-info btn-circle btn-lg"><i class="fas fa-paper-plane"></i> </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Right panel -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- End Page Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
-                <div class="right-sidebar">
-                    <div class="slimscrollright">
-                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
-                        <div class="r-panel-body">
-                            <ul id="themecolors" class="m-t-20">
-                                <li><b>With Light sidebar</b></li>
-                                <li><a href="javascript:void(0)" data-theme="default" class="default-theme working">1</a></li>
-                                <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
-                                <li><a href="javascript:void(0)" data-theme="red" class="red-theme">3</a></li>
-                                <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
-                                <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
-                                <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
-                                <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
-                                <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
-                                <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
-                                <li><a href="javascript:void(0)" data-theme="red-dark" class="red-dark-theme">9</a></li>
-                                <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
-                                <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
-                                <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme ">12</a></li>
-                            </ul>
-                            <ul class="m-t-20 chatonline">
-                                <li><b>Chat option</b></li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="{{ asset('admin/assets/images/users/1.jpg') }}" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="{{ asset('admin/assets/images/users/2.jpg') }}" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="{{ asset('admin/assets/images/users/3.jpg') }}" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="{{ asset('admin/assets/images/users/4.jpg') }}" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="{{ asset('admin/assets/images/users/5.jpg') }}" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="{{ asset('admin/assets/images/users/6.jpg') }}" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="{{ asset('admin/assets/images/users/7.jpg') }}" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="{{ asset('admin/assets/images/users/8.jpg') }}" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- my task Timeline -->
+    <div class="col-xl-4 col-lg-12">
+      <div class="card">
+        <div class="card-header border-0">
+          <h4 class="card-title">My Tasks</h4>
+          <div class="heading-elements">
+            <ul class="list-inline">
+              <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="widget-timeline">
+              <ul>
+                <li class="timeline-items timeline-icon-success">
+                  <p class="timeline-time">Monday 12:12pm</p>
+                  <div class="timeline-title">Catch Up With Brain</div>
+                  <div class="timeline-subtitle">Mobile Project</div>
+                  <div>
+                    <ul class="list-unstyled users-list cursor-pointer m-0 d-flex align-items-center">
+                      <li class="avatar avatar-sm pull-up my-0">
+                        <img class="rounded-circle" src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-20.png')}}" alt="Generic placeholder image" data-toggle="tooltip" data-placement="top" title="Ogasawara">
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="timeline-items timeline-icon-danger">
+                  <p class="timeline-time">2 days ago</p>
+                  <div class="timeline-title">Make new icons</div>
+                  <div class="timeline-subtitle">Web Apps</div>
+                </li>
+                <li class="timeline-items timeline-icon-warning">
+                  <p class="timeline-time">Yesterday</p>
+                  <div class="timeline-title">
+                    <span>Design explorations</span>
+                    <span class="badge badge-pill badge-sm badge-success">Completed</span>
+                  </div>
+                  <div class="timeline-subtitle">Company Website</div>
+                </li>
+                <li class="timeline-items timeline-icon-info">
+                  <p class="timeline-time">5 hours ago</p>
+                  <div class="timeline-title">Lunch with Mary</div>
+                  <div class="timeline-subtitle">Grill House</div>
+                  <div>
+                    <ul class="list-unstyled users-list cursor-pointer m-0 d-flex align-items-center">
+                      <li class="avatar avatar-sm pull-up my-0">
+                        <img class="rounded-circle" src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-20.png')}}" alt="Generic placeholder image" data-toggle="tooltip" data-placement="top" title="Ogasawara">
+                      </li>
+                      <li class="avatar avatar-sm pull-up my-0">
+                        <img class="rounded-circle" src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-21.png')}}" alt="Generic placeholder image" data-toggle="tooltip" data-placement="top" title="Stepan">
+                      </li>
+                      <li class="avatar avatar-sm pull-up my-0">
+                        <img class="rounded-circle" src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-22.png')}}" alt="Generic placeholder image" data-toggle="tooltip" data-placement="top" title="Kimberly">
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- active users and my task timeline cards ends here -->
+          </div>
+        </div>
+      </div>
+      <!-- END: Content-->
+@push('style')
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/vendors/css/vendors.min.css') }}">
+    <!-- END: Vendor CSS-->
+    
+     <!-- BEGIN: Page CSS-->
+     <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/core/menu/menu-types/vertical-menu-modern.css') }}">
+     <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/core/colors/palette-gradient.min.css') }}">
+     <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/fonts/simple-line-icons/style.min.css') }}">
+     <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/pages/card-statistics.min.css') }}">
+     <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/pages/vertical-timeline.min.css') }}">
+     <!-- END: Page CSS-->
+@endpush
+     @push('script')
+         <!-- BEGIN: Page Vendor JS-->
+<script src="{{ asset('admin/app-assets/vendors/js/charts/apexcharts/apexcharts.min.js') }}"></script>
+<script src="{{ asset('admin/app-assets/js/scripts/cards/card-statistics.min.js') }}"></script>
+<!-- END: Page Vendor JS-->
+     @endpush
+
+      
+     
 @endsection

@@ -18,8 +18,8 @@ Route::get('/', 'front\IndexController@index')->name('index.site');
 
 
 
-Route::get('/ckeditor', function(){
-    return view('vendor.file-manager.ckeditor');
+Route::get('/test', function(){
+    return view('layouts.back.index');
 });
 Route::prefix('/full-panel')->middleware(['role:developer'])->group(function () {
 
@@ -42,7 +42,7 @@ Route::prefix('/full-panel')->middleware(['role:developer'])->group(function () 
 
         route::resource('/','admin\ArticleController' )->names([
             'create' => 'yangilik.qoshish',
-            'index' => 'yangiliklar',
+            'index' => 'yangiliklar.index',
             'store' => 'yangiliklar.store',
             'show' => 'yangiliklar.show',    
     
