@@ -71,6 +71,9 @@
                           <div class="form-body">
 
                               <div class="form-group">
+                                <div class="ul-form__text form-text">@if ($errors->has('title'))
+                                    <span class="text-danger">{{ $errors->first('title') }}</span>
+                                @endif</div>
                                   <label for="slug-source">Yangilikni nomlanishi: (Qisqa va aniq holda, lotin yozuvida, kichik harflarda)</label>
                                   <input type="text" required  value="{{ old('title') }}" name="title" id="slug-source"  class="form-control" placeholder="Yangilik nomlari qisqartirilib yozilsin."  data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Yangilik sarlavhasi" data-original-title="" title="">
                               </div>

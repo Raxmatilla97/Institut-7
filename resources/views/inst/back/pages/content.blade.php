@@ -698,7 +698,7 @@
     <!-- END: Custom CSS-->
 
 @endpush
-     @push('script')
+     @push('scripts')
 
      <!-- BEGIN: Vendor JS-->
     <script src="{{ asset('admin/app-assets/vendors/js/vendors.min.js') }}"></script>

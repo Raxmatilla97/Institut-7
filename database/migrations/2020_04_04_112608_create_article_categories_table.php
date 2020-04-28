@@ -16,7 +16,7 @@ class CreateArticleCategoriesTable extends Migration
         Schema::create('article_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 100);
-            $table->boolean('active')->default('0');
+            $table->boolean('active')->default('0')->nullable();
             $table->string('slug', 150);
             $table->string('img')->nullable();
             $table->timestamps();

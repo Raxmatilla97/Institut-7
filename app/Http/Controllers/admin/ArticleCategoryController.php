@@ -15,9 +15,9 @@ class ArticleCategoryController extends Controller
      */
     public function index()
     {
-        $articlesCategory = ArticleCategory::latest()->orderBy("name")->paginate(10);
+        $articlesCategory = ArticleCategory::latest()->orderBy("name")->paginate();
 
-        return view('institut.backend.crud.yangiliklar-crud.article-category-list', compact(
+        return view('inst.back.crud.yangiliklar.article-category', compact(
             
             'articlesCategory',
        
@@ -45,7 +45,7 @@ class ArticleCategoryController extends Controller
     {
         $request->validate([
             'name' => 'required|unique:articles,title',
-            'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:640',
+            //'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:640',
             //'image' => 'required',
             // 'category_id' => 'required',
             // 'description' => 'required',
@@ -61,12 +61,12 @@ class ArticleCategoryController extends Controller
          [
             'name.required' => 'Yangilik nomini yozishingiz shart.',
             'slug.required'  => 'Yangilik slug (saytdagi manzilini) yozishingiz shart.',
-            'img.required'  => 'Yangilik asosiy suratini yuklang.',
+            //'img.required'  => 'Yangilik asosiy suratini yuklang.',
             // 'category_id.required'  => "Yangilik bo'limini tanlang.",
             // 'description.required'  => "Asosiy yangilik contentini yozing.",
             // 'title.unique'  => "Bu nomlanishdagi yangilik, saytda mavjud. Iltimos nomlanishi o'zgartiring.",
             'slug.unique'  => "Bu nomlanishdagi yangilik manzili, saytda mavjud.",
-            'img.max'  => "Suratga Max: :max - kbite dan kotta bo'lmagan suratlarni yuklang.",
+           // 'img.max'  => "Suratga Max: :max - kbite dan kotta bo'lmagan suratlarni yuklang.",
 
         ]
     
@@ -76,13 +76,19 @@ class ArticleCategoryController extends Controller
         
 
             // Suratni yuklash kodi
-            $image = $request->file('img');
+            if ($request->file('img')) {
 
-            $new_name =  rand() . '.' . $image->getClientOriginalExtension();
+                $image = $request->file('img');
 
-            $image->move(public_path('yangiliklar'), $new_name);
-        
-            $new_name = 'yangiliklar/'.$new_name;
+                $new_name =  rand() . '.' . $image->getClientOriginalExtension();
+    
+                $image->move(public_path('yangiliklar'), $new_name);
+            
+                $new_name = 'yangiliklar/'.$new_name;
+            } else{
+                $new_name = "";
+            }
+           
 
             // tugadi
             $category = new ArticleCategory([

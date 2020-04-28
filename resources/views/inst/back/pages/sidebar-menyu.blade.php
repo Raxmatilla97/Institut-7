@@ -7,18 +7,20 @@
 
           <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
-          <li class=" nav-item"><a href="{{route('admin')}}"><i class="feather icon-slash"></i><span class="menu-title" data-i18n="Disabled Menu">Boshqaruv ko'rinishi</span></a>
+          <li class=" nav-item {{ (request()->is('full-panel')) ? 'active' : '' }}"><a href="{{route('admin')}}"><i class="feather icon-slash"></i><span class="menu-title" data-i18n="Boshqaruv ko'rinishi">Boshqaruv ko'rinishi</span></a>
             </li>
            
-            <li class=" nav-item"><a href="#"><i class="feather icon-monitor"></i><span class="menu-title" data-i18n="Templates">OTM-AXBOROT</span></a>
+            <li class=" nav-item"><a href="#"><i class="feather icon-monitor"></i><span class="menu-title" data-i18n="OTM-AXBOROT">OTM-AXBOROT</span></a>
               <ul class="menu-content">
-                <li><a class="menu-item" href="#" data-i18n="Vertical">Yangiliklar</a>
+                <li><a class="menu-item" href="#" data-i18n="Yangiliklar">Yangiliklar</a>
                   <ul class="menu-content">
-                  <li><a class="menu-item" href="{{route('yangiliklar.index')}}" data-i18n="Modern Menu">Yangiliklar ro'yxati</a>
-                    </li>
-                    <li><a class="menu-item" href="{{route('yangiliklar.create')}}" data-i18n="Collapsed Menu">Yangilik qo'shish</a>
-                    </li>
-                    <li><a class="menu-item" href="../vertical-menu-template" data-i18n="Semi Light">Yangilik bo'limlari</a>
+                  <li class="{{ (request()->is('full-panel/otm-axborot/yangiliklar')) ? 'active' : '' }}"><a class="menu-item"  href="{{route('yangiliklar.index')}}" data-i18n="Yangiliklar ro'yxati">Yangiliklar ro'yxati</a>
+                   
+                    </li >
+                    <li class="{{ (request()->is('full-panel/otm-axborot/yangiliklar/create')) ? 'active' : '' }}"><a class="menu-item" href="{{route('yangiliklar.create')}}" data-i18n="Yangilik qo'shish">Yangilik qo'shish</a>
+                    
+                      </li >
+                    <li class="{{ (request()->is('full-panel/otm-axborot/yangilik-bolimlari')) ? 'active' : '' }}"><a class="menu-item" href="{{route('yangilik-bolim.index')}}" data-i18n="Semi Light">Yangilik bo'limlari</a>
                     </li>
                     <li><a class="menu-item" href="../vertical-menu-template-semi-dark" data-i18n="Semi Dark">Sozlamlar</a>
                     </li>
