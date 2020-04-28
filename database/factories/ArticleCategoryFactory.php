@@ -11,6 +11,7 @@ $factory->define(ArticleCategory::class, function (Faker $faker) {
     return [
         'name' => $name,
         'slug' => $slug,
+        
         'active' => $faker->randomElement(['0','1']),
         'img' => $faker->randomElement([
             'storage/photos/4/1.jpg',

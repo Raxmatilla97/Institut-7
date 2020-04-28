@@ -17,7 +17,8 @@ class Article extends Model
         'description',
         'user_id',
         'category_id',
-        'kafedra_id'
+        'kafedra_id',
+        'notes'
     ];
 
     public function category(){

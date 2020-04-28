@@ -15,7 +15,7 @@ class AdminPanelController extends Controller
     public function index()
     {
         
-        return view('layouts.back.makets.sayt-maket');
+        return view('inst.back.pages.content');
     }
 
     /**

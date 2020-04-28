@@ -19,7 +19,7 @@ Route::get('/', 'front\IndexController@index')->name('index.site');
 
 
 Route::get('/test', function(){
-    return view('layouts.back.index');
+    return view('.inst.back.fragments.file-manager');
 });
 Route::prefix('/full-panel')->middleware(['role:developer'])->group(function () {
 
@@ -41,7 +41,7 @@ Route::prefix('/full-panel')->middleware(['role:developer'])->group(function () 
     Route::prefix('yangiliklar')->middleware(['role:developer'])->group(function () {
 
         route::resource('/','admin\ArticleController' )->names([
-            'create' => 'yangilik.qoshish',
+            'create' => 'yangiliklar.create',
             'index' => 'yangiliklar.index',
             'store' => 'yangiliklar.store',
             'show' => 'yangiliklar.show',    

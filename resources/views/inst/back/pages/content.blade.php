@@ -1,5 +1,5 @@
 
-@extends('layouts.back.sayt-app')
+@extends('layouts.back.makets.sayt-maket')
 
 @section('content')
     <!-- BEGIN: Content-->
@@ -667,10 +667,21 @@
       </div>
       <!-- END: Content-->
 @push('style')
+
+
+
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/vendors/css/vendors.min.css') }}">
     <!-- END: Vendor CSS-->
     
+    
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/bootstrap-extended.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/colors.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/components.min.css') }}">
+    <!-- END: Theme CSS-->
+
      <!-- BEGIN: Page CSS-->
      <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/core/menu/menu-types/vertical-menu-modern.css') }}">
      <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/core/colors/palette-gradient.min.css') }}">
@@ -678,12 +689,37 @@
      <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/pages/card-statistics.min.css') }}">
      <link rel="stylesheet" type="text/css" href="{{ asset('admin/app-assets/css/pages/vertical-timeline.min.css') }}">
      <!-- END: Page CSS-->
+
+     
+   
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/css/style.css') }}">
+    <!-- END: Custom CSS-->
+
 @endpush
      @push('script')
+
+     <!-- BEGIN: Vendor JS-->
+    <script src="{{ asset('admin/app-assets/vendors/js/vendors.min.js') }}"></script>
+    <!-- BEGIN Vendor JS-->
+
          <!-- BEGIN: Page Vendor JS-->
 <script src="{{ asset('admin/app-assets/vendors/js/charts/apexcharts/apexcharts.min.js') }}"></script>
-<script src="{{ asset('admin/app-assets/js/scripts/cards/card-statistics.min.js') }}"></script>
+
 <!-- END: Page Vendor JS-->
+
+ 
+
+    <!-- BEGIN: Theme JS-->
+    <script src="{{ asset('admin/app-assets/js/core/app-menu.min.js') }}"></script>
+    <script src="{{ asset('admin/app-assets/js/core/app.min.js') }}"></script>
+    <script src="{{ asset('admin/app-assets/js/scripts/customizer.min.js') }}"></script>
+    <!-- END: Theme JS-->
+
+   
+    <script src="{{ asset('admin/app-assets/js/scripts/cards/card-statistics.min.js') }}"></script>
+    
      @endpush
 
       

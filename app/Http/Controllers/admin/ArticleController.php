@@ -78,7 +78,7 @@ class ArticleController extends Controller
         //dd($users);  
 
 
-        return view('institut.backend.crud.yangiliklar-crud.articles-create', compact( 'users','category', 'kafedralar'));
+        return view('inst.back.crud.yangiliklar.article-create', compact( 'users','category', 'kafedralar'));
     }
 
     /**
@@ -114,24 +114,28 @@ class ArticleController extends Controller
             'description.required'  => "Asosiy yangilik contentini yozing.",
             'title.unique'  => "Bu nomlanishdagi yangilik, saytda mavjud. Iltimos nomlanishi o'zgartiring.",
             'slug.unique'  => "Bu nomlanishdagi yangilik manzili, saytda mavjud.",
+            'active.required' => "Yangilik chop etishga tayyormi?"
 
         ]
     
     );
        
-       
-        
 
+  
+        
+  if ($image = $request->file('image')) {
             // Suratni yuklash kodi
-            $image = $request->file('image');
+            // $image = $request->file('image');
 
             $new_name =  rand() . '.' . $image->getClientOriginalExtension();
 
             $image->move(public_path('yangiliklar'), $new_name);
         
             $new_name = 'yangiliklar/'.$new_name;
-
+        }  
             // tugadi
+
+            
 
         //dd($new_name);
       $yangilik = new Article([
@@ -139,6 +143,7 @@ class ArticleController extends Controller
         'title' => $request->get('title'),
         'slug' => $request->get('slug'),
         'image' => $new_name ,
+        'notes' => $request->get('notes'),
         'description' => $request->get('description'),
         'category_id' => $request->get('category_id'),
         'user_id' => $request->get('user_id'),
@@ -150,7 +155,7 @@ class ArticleController extends Controller
     //dd($yangilik);
     $yangilik->save();
       
-         return redirect()->route('yangiliklar')->with('success', "Siz yozgan yangilik bazaga kiritildi.");
+         return redirect()->route('yangiliklar.index')->with('success', "Siz yozgan yangilik bazaga kiritildi.");
          
        
        
@@ -223,7 +228,7 @@ class ArticleController extends Controller
 
        
 
-    return view('institut.backend.crud.yangiliklar-crud.articles-list', compact(
+    return view('inst.back.crud.yangiliklar.article-list', compact(
         'articleStat',
         'articles',
         'articleStatActive',
@@ -251,7 +256,7 @@ class ArticleController extends Controller
       $articleStatNotApproval = Article::where('tasdiq', '=', '0');
      
 
-  return view('institut.backend.crud.yangiliklar-crud.articles-list', compact(
+  return view('inst.back.crud.yangiliklar.article-list', compact(
       'articleStat',
       'articles',
       'articleStatActive',
@@ -281,7 +286,7 @@ class ArticleController extends Controller
         $articleStatApproval = Article::where('tasdiq', '=', '1');
         $articleStatNotApproval = Article::where('tasdiq', '=', '0');
 
-        return view('institut.backend.crud.yangiliklar-crud.articles-list', compact(
+        return view('inst.back.crud.yangiliklar.article-list', compact(
         'articleStat',
         'articles',       
         'articleStatActive',
@@ -311,7 +316,7 @@ class ArticleController extends Controller
         $articleStatApproval = Article::where('tasdiq', '=', '1');
         $articleStatNotApproval = Article::where('tasdiq', '=', '0');
 
-        return view('institut.backend.crud.yangiliklar-crud.articles-list', compact(
+        return view('inst.back.crud.yangiliklar.article-list', compact(
         'articleStat',
         'articles',       
         'articleStatActive',

@@ -72,7 +72,7 @@
                           <i class="icon-rocket danger font-large-2 float-left"></i>
                         </div>
                         <div class="media-body text-right">
-                          <h3>{{ $articleStatNotActive->count()}} ta</h3>
+                          <h3 class="danger">{{ $articleStatNotActive->count()}} ta</h3>
                           <span>Activlashmagan</span>
                         </div>
                       </div>
@@ -90,7 +90,7 @@
                           <i class="icon-rocket success font-large-2 float-left"></i>
                         </div>
                         <div class="media-body text-right">
-                          <h3>{{ $articleStatActive->count()}} ta</h3>
+                          <h3 class="success">{{ $articleStatActive->count()}} ta</h3>
                           <span>Activlashgan</span>
                         </div>
                       </div>
@@ -108,25 +108,45 @@
                     <div class="card-body">
                       <div class="media d-flex">
                         <div class="media-body text-left">
-                          <h3 class="danger">278</h3>
-                          <span>New Projects</span>
+                          <h3 class="danger">{{ $articleStatNotApproval->count()}} ta</h3>
+                          <span>Tekshirilmagan</span>
                         </div>
                         <div class="align-self-center">
-                          <i class="icon-rocket danger font-large-2 float-right"></i>
+                          <i class="feather icon-log-in danger font-large-2 float-right"></i>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              
+            
+                <div class="col-xl-3 col-sm-6 col-12">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="card-body">
+                        <div class="media d-flex">
+                          <div class="media-body text-left">
+                            <h3 class="success">{{ $articleStatApproval->count()}} ta</h3>
+                            <span>Tekshirilgan</span>
+                          </div>
+                          <div class="align-self-center">
+                            <i class="feather icon-log-out success font-large-2 float-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               <div class="col-xl-3 col-sm-6 col-12">
                 <div class="card">
                   <div class="card-content">
                     <div class="card-body">
                       <div class="media d-flex">
                         <div class="media-body text-left">
-                          <h3 class="success">156</h3>
-                          <span>New Clients</span>
+                          <h3 class="success">N ta</h3>
+                          <span>Yangilik yozganlar</span>
                         </div>
                         <div class="align-self-center">
                           <i class="icon-user success font-large-2 float-right"></i>
@@ -137,23 +157,7 @@
                 </div>
               </div>
           
-              <div class="col-xl-3 col-sm-6 col-12">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="card-body">
-                      <div class="media d-flex">
-                        <div class="media-body text-left">
-                          <h3 class="warning">64.89 %</h3>
-                          <span>Conversion Rate</span>
-                        </div>
-                        <div class="align-self-center">
-                          <i class="icon-pie-chart warning font-large-2 float-right"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
               <div class="col-xl-3 col-sm-6 col-12">
                 <div class="card">
                   <div class="card-content">
@@ -185,7 +189,7 @@
                       <div class="sidebar-toggle d-block d-lg-none"><i class="feather icon-menu font-large-1"></i></div>
                       <form action="#">
                           <div class="position-relative">
-                              <input type="search" id="search-contacts" class="form-control" placeholder="Search contacts...">
+                              <input type="search" id="search-contacts" class="form-control" placeholder="Yangilik qidirish...">
                               <div class="form-control-position">
                                   <i class="fa fa-search text-size-base text-muted la-rotate-270"></i>
                               </div>
@@ -203,10 +207,10 @@
       <div class="card">
           <div class="card-head">
               <div class="card-header">
-                  <h4 class="card-title">All Contacts</h4>
+                  <h4 class="card-title">Barcha yangiliklar</h4>
                   <div class="heading-elements mt-0">
                       <button class="btn btn-primary btn-md" data-toggle="modal" data-target="#AddContactModal"><i class="d-md-none d-block feather icon-plus white"></i>
-                          <span class="d-md-block d-none">Add Contacts</span></button>
+                          <span class="d-md-block d-none">Yangilik qo'shish</span></button>
                       <div class="modal fade" id="AddContactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
                        aria-hidden="true">
                           <div class="modal-dialog" role="document">
@@ -282,13 +286,17 @@
                               </div>
                           </div>
                       </div>
+                     
+                      
                       <span class="dropdown">
                           <button id="btnSearchDrop1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-warning dropdown-menu-right dropdown-toggle btn-md">
-                              <i class="feather icon-download-cloud white"></i></button>
+                              <i class="feather icon-download-cloud white"></i>Qo'shimcha ishlar</button>
                           <span aria-labelledby="btnSearchDrop1" class="dropdown-menu dropdown-menu-right mt-1">
-                              <a href="#" class="dropdown-item"><i class="feather icon-upload"></i> Import</a>
-                              <a href="#" class="dropdown-item"><i class="feather icon-download"></i> Export</a>
-                              <a href="#" class="dropdown-item"><i class="feather icon-shuffle"></i> Find Duplicate</a>
+                            <a class="dropdown-item" href="{{ route('yangiliklar.approw')}}">Tasdiqlanmagan yangiliklar</a>
+                            <a class="dropdown-item" href="{{ route('yangiliklar.yesapprow') }} ">Tasdiqlangan yangiliklar</a>
+                            <a class="dropdown-item" href="{{ route('yangiliklar.activmas')}}">Aktivmas yangiliklar</a>
+                            <a class="dropdown-item" href="{{ route('yangiliklar.activlar')}}">Aktivlashgan yangiliklar</a>
+                            <a class="dropdown-item" href="{{ route('yangiliklar.index')}}">Barcha yangiliklar</a>
                           </span>
                       </span>
                       <button class="btn btn-default btn-sm"><i class="feather icon-settings white"></i></button>
@@ -298,15 +306,15 @@
           <div class="card-content">
               <div class="card-body">
                   <!-- Task List table -->
-                  <button type="button" class="btn btn-danger btn-sm delete-all mb-1">Delete All</button>
+                  {{-- <button type="button" class="btn btn-danger btn-sm delete-all mb-1">Delete All</button> --}}
                   <div class="table-responsive">
                       <table id="users-contacts" class="table table-white-space table-bordered row-grouping display no-wrap icheck table-middle text-center">
                           <thead>
                               <tr>
                                   <th>Mualif</th>
                                   <th>Yangilik nomi</th>
-                                  <th>Kafedra tomonidan</th>
-                                  <th>Yaratilgan sana</th>
+                                  {{-- <th>Kafedra tomonidan</th> --}}
+                                  {{-- <th>Yaratilgan sana</th> --}}
                                   <th>Holati</th>
                                   <th>Tasdiqlanganligi</th>
                                   <th>Qo'shimcha ishlar</th>
@@ -323,7 +331,8 @@
                               <tr>
                                 <td  style="background: @if($item->active == 0) #FFA5B2; @else #68E2BD; @endif" >
                                     <div class="media">
-                                        <div class="media-left pr-1"><span class="avatar avatar-sm avatar-online rounded-circle"><img src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-2.png')}}" alt="avatar"><i></i></span></div>
+                                        <div class="media-left pr-1"><span class="avatar avatar-sm avatar-online rounded-circle" style="width: 40px;
+                                            height: auto;"><img src="{{ asset('admin/app-assets/images/portrait/small/avatar-s-2.png')}}" alt="avatar"><i></i></span></div>
                                         {{-- <div class="media-body media-middle">
                                         <a class="media-heading name">{{ $item->users->name}}</a>
                                         </div> --}}
@@ -331,10 +340,10 @@
                                 </td>
                               <td> {{$item->title}}</td>
                                   
-                                  <td class="text-center">
+                                  {{-- <td class="text-center">
                                     @if ( isset($item->kafedra->name) )  {{$item->kafedra->name}} @else <p class="typo_link text-warning">Kafedra kiritilmagan</p> @endif
-                                  </td>
-                                  <td>{{ $item->created_at }}</td>
+                                  </td> --}}
+                                  {{-- <td>{{ $item->created_at }}</td> --}}
                                   <td class="phone">
                                     <button type="button" class="btn mr-1 mb-1 @if($item->active == 0) btn-danger @else  btn-success  @endif btn-sm"> @if($item->active == 0)<i class="fa fa-moon-o"></i> Activ emas! @else <i class="fa fa-desktop"></i> Bu sahifa active! @endif</button>
                                   
@@ -367,8 +376,8 @@
                               <tr>
                                 <th>Mualif</th>
                                 <th>Yangilik nomi</th>
-                                <th>Kafedra tomonidan</th>
-                                <th>Yaratilgan sana</th>
+                                {{-- <th>Kafedra tomonidan</th> --}}
+                                {{-- <th>Yaratilgan sana</th> --}}
                                 <th>Holati</th>
                                 <th>Tasdiqlanganligi</th>
                                 <th>Qo'shimcha ishlar</th>

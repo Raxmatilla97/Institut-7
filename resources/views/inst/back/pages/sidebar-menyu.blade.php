@@ -16,7 +16,7 @@
                   <ul class="menu-content">
                   <li><a class="menu-item" href="{{route('yangiliklar.index')}}" data-i18n="Modern Menu">Yangiliklar ro'yxati</a>
                     </li>
-                    <li><a class="menu-item" href="../vertical-collapsed-menu-template" data-i18n="Collapsed Menu">Yangilik qo'shish</a>
+                    <li><a class="menu-item" href="{{route('yangiliklar.create')}}" data-i18n="Collapsed Menu">Yangilik qo'shish</a>
                     </li>
                     <li><a class="menu-item" href="../vertical-menu-template" data-i18n="Semi Light">Yangilik bo'limlari</a>
                     </li>
