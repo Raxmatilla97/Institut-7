@@ -46,6 +46,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/responsive.css') }}"/>
 
 
+
 </head>
 
 
@@ -106,23 +107,24 @@
 
 </div><!-- page end -->
 
+<!-- Javascript -->
 
-    <!-- Javascript -->
 
-    <script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/tether.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script> 
-    <script src="{{ asset('frontend/js/jquery.easing.js') }}"></script>    
-    <script src="{{ asset('frontend/js/jquery-waypoints.js') }}"></script>    
-    <script src="{{ asset('frontend/js/jquery-validate.js') }}"></script> 
-    <script src="{{ asset('frontend/js/jquery.prettyPhoto.js') }}"></script>
-    <script src="{{ asset('frontend/js/slick.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/numinate.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/imagesloaded.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/jquery-isotope.js') }}"></script>
-    <script src="{{ asset('frontend/js/lazysizes.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/main.js') }}"></script>
-    <!-- Javascript end-->
+<script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
+<script src="{{ asset('frontend/js/tether.min.js') }}"></script>
+<script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script> 
+<script src="{{ asset('frontend/js/jquery.easing.js') }}"></script>    
+<script src="{{ asset('frontend/js/jquery-waypoints.js') }}"></script>    
+<script src="{{ asset('frontend/js/jquery-validate.js') }}"></script> 
+<script src="{{ asset('frontend/js/jquery.prettyPhoto.js') }}"></script>
+<script src="{{ asset('frontend/js/slick.min.js') }}"></script>
+<script src="{{ asset('frontend/js/numinate.min.js') }}"></script>
+<script src="{{ asset('frontend/js/imagesloaded.min.js') }}"></script>
+<script src="{{ asset('frontend/js/jquery-isotope.js') }}"></script>
+<script src="{{ asset('frontend/js/lazysizes.min.js') }}"></script>
+<script src="{{ asset('frontend/js/main.js') }}"></script>
+<!-- Javascript end-->
+    
 
 </body>
 </html>

@@ -36,6 +36,8 @@
 
 @endsection
 
+
+
 {{-- Frontendda yuqori qismdagi biz haqimizda fragmenti --}}
 @section('about-us')
      

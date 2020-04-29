@@ -107,3 +107,7 @@ Auth::routes();
 Route::get('/roles', 'admin\PermissionController@Permission');
 
 
+Route::get('test', function () {
+    return view('layouts.front.makets.test');
+});
+
