@@ -6,7 +6,7 @@
         <!--testimonial-section-->
         <section class="ttm-row testimonial-section ttm-bgcolor-skincolor bg-img5 ttm-bg ttm-bgimage-yes clearfix"> 
             <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
-            <div class="container">
+            <div class="container" style="max-width: 1400px">
                 <!-- row -->
                 <div class="row">
                     <div class="col-lg-12">

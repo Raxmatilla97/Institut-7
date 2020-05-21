@@ -1548,7 +1548,7 @@ ul.social-icons{
 	color: #b6bbcc;
 }
 @media (min-width: 992px){
-	.banner-slide > img{ height: 705px; width: 100%;}
+	.banner-slide > img{ height: auto; width: 100%;}
   	.banner-slider-overlay .banner-slide > img{ height: 900px;}
 }
 @media (max-width: 1199px) {

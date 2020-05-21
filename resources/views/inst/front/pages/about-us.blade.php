@@ -3,7 +3,7 @@
 @section('about-us')
     <!--introduction-section-->
     <section class="ttm-row introduction-section clearfix">
-        <div class="container">
+        <div class="container" style="max-width: 1600px">
             <div class="row">
                 <div class="col-lg-6 col-xs-12">
                     <!-- section title -->

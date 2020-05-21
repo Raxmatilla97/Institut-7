@@ -3,7 +3,7 @@
 @section('our-events')
     <!--event-section-->
     <section class="ttm-row event2-section bg-img1 ttm-bgcolor-darkgrey clearfix">
-        <div class="container">
+        <div class="container" style="max-width: 1300px">
             <!-- row -->
             <div class="row">
                 <div class="col-lg-12">

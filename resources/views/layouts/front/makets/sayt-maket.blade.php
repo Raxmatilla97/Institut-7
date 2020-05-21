@@ -95,6 +95,13 @@
 
 @endsection
 
+{{-- Frontendda eng pastgi qismdagi blog yoki article fragmenti --}}
+@section('blog2')
+     
+     @include('inst.front.pages.blog2')
+
+@endsection
+
 {{-- Frontendda eng pastgi qismdagi footer fragmenti --}}
 @section('footer')
      

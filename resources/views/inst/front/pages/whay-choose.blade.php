@@ -3,7 +3,7 @@
     
         <!--why_choose2-section -->
         <div class="ttm-row why_choose2-section clearfix">
-            <div class="container">
+            <div class="container" style="max-width: 1500px">
                 <!-- row -->
                 <div class="row">
                     <div class="col-lg-12">

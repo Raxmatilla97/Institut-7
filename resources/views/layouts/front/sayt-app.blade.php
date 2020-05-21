@@ -9,6 +9,7 @@
 <meta name="viewport" content=" width=device-width, initial-scale=1, maximum-scale=1" />
 <title>Uniaro &#8211; Academics and Education Html Template </title>
 
+
 <!-- favicon icon -->
 <link rel="shortcut icon" href="{{ asset('frontend/images/favicon.png') }}" />
 
@@ -45,7 +46,12 @@
 <!-- responsive -->
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/responsive.css') }}"/>
 
+<!-- <style>
 
+    .container {
+    max-width: 1140px;
+}
+</style> -->
 
 </head>
 
@@ -68,14 +74,20 @@
 
         @yield('slider-banner') 
 
+     
+
     <!--site-main start-->
     <div class="site-main">
 
 
         @yield('start-1')
 
-
         @yield('about-us')
+
+
+        @yield('blog-section')
+
+      
 
         @yield('popular-cource')
 
@@ -91,7 +103,8 @@
 
         @yield('admission')
 
-        @yield('blog-section')
+      
+        @yield('blog2')
 
     </div><!--site-main end-->
 
@@ -123,6 +136,7 @@
 <script src="{{ asset('frontend/js/jquery-isotope.js') }}"></script>
 <script src="{{ asset('frontend/js/lazysizes.min.js') }}"></script>
 <script src="{{ asset('frontend/js/main.js') }}"></script>
+
 <!-- Javascript end-->
     
 

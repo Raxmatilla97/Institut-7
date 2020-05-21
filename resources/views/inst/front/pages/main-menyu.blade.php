@@ -11,7 +11,7 @@
                             <!-- site-branding -->
                             <div class="site-branding mr-auto">
                                 <a class="home-link" href="index.html" title="Uniaro" rel="home">
-                                    <img id="logo-img" class="img-center lazyload" data-src="{{ asset('frontend/images/logo-img.png') }}" alt="logo-img">
+                                    <img id="logo-img" class="img-center lazyload" data-src="{{ asset('frontend/images/ist_logo.png') }}" alt="logo-img" style="max-height: 70px;">
                                 </a>
                             </div><!-- site-branding end -->
                             <div class="btn-show-menu-mobile menubar menubar--squeeze">
@@ -23,7 +23,7 @@
                             <nav class="main-menu menu-mobile" id="menu">
                                 <ul class="menu">
                                     <li class="mega-menu-item active">
-                                        <a href="home-3.html#" class="mega-menu-link">Home</a>
+                                        <a href="home-3.html#" class="mega-menu-link">Bosh sahifa</a>
                                         <ul class="mega-submenu">
                                             <li><a href="index.html">Home School</a></li>
                                             <li><a href="home-2.html">Home University</a></li>
