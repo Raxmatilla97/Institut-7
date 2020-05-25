@@ -10,8 +10,8 @@
                         <!-- section title -->
                         <div class="section-title title-style-center_text">
                             <div class="title-header">
-                                <h5>Best at feature</h5>
-                                <h2 class="title">Why Choose Uniaro</h2>
+                                <h5>OTM AXBOROT XIZMATI</h5>
+                                <h3 class="title">BOSHQA YANGILIKLAR VA QIZIQARLI MAQOLALAR</h3>
                             </div>
                             <div class="heading-seperator"><span></span></div>
                         </div><!-- section title end -->
@@ -22,8 +22,8 @@
                     <div class="col-lg-12">
                         <div class="ttm-tabs tabs-style-01" data-effect="fadeIn">
                             <ul class="tabs clearfix">
-                                <li class="tab active"><a href="home-3.html#">Who We Are</a></li>
-                                <li class="tab"><a href="home-3.html#">Books & Library</a></li>
+                                <li class="tab active"><a href="home-3.html#">Axborot makoni</a></li>
+                                <li class="tab"><a href="home-3.html#">Ilmiy maqolalar</a></li>
                                 <li class="tab"><a href="home-3.html#">Trending Course</a></li>
                                 <li class="tab"><a href="home-3.html#">Certified Teachers</a></li>
                             </ul>

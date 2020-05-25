@@ -13,11 +13,11 @@
                         <!-- section title -->
                         <div class="section-title mb-5">
                             <div class="title-header ttm-textcolor-white">
-                                <h5>ADMISSION OPEN NOW!</h5>
-                                <h2 class="title">Uniaro International University Now <br> <span class="ttm-textcolor-skincolor">Enrolling</span> For New Session!</h2>
+                                <h5>OTM JOYLASHUVI!</h5>
+                                <h2 class="title">Chirchiq davlat pedagogika institutining <br> <span class="ttm-textcolor-skincolor">joylashuv nuqtalari </span>va unga olib boruvchi yo'llar.</h2>
                             </div>
                         </div><!-- section title end -->
-                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-white" href="home-3.html#">More Details</a>
+                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-white" href="#">Xaritaga o'tish</a>
                     </div>
                 </div>
             </div>

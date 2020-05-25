@@ -22,6 +22,7 @@ class CreateArticlesTable extends Migration
             $table->string('image')->nullable();
             $table->boolean('tasdiq')->default('0');
             $table->boolean('active')->default('0');
+            $table->text('small');
             //$table->json('files')->nullable();
             
             $table->timestamps();

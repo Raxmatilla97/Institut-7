@@ -25,7 +25,7 @@
                 <!-- featured-imagebox-post -->
                 <div class="featured-imagebox featured-imagebox-post style2">
                     <div class="ttm-post-thumbnail featured-thumbnail"> 
-                        <img class="img-fluid lazyload" data-src="images/blog/blog-one-720x544.jpg" alt="image">
+                        <img class="img-fluid lazyload" data-src="{{ asset('frontend/images/blog/blog-one-720x544.jpg')}}" alt="image">
                     </div>
                     <div class="featured-content featured-content-post">
                         <div class="ttm-box-post-date">

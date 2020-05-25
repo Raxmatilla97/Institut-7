@@ -87,8 +87,8 @@
 
         @yield('blog-section')
 
-      
-
+        @yield('hisoblagich')
+ 
         @yield('popular-cource')
 
         @yield('our-events')
@@ -105,6 +105,8 @@
 
       
         @yield('blog2')
+
+        @yield('client-section')
 
     </div><!--site-main end-->
 

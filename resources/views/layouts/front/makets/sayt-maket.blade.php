@@ -1,5 +1,10 @@
 @extends('layouts.front.sayt-app')
 
+@section('hisoblagich')
+     
+     @include('inst.front.pages.hisoblagich')
+
+@endsection
 
 {{-- Frontendda eng yuqori qismdagi Panel fragmenti --}}
 @section('fbar-main')
@@ -99,6 +104,13 @@
 @section('blog2')
      
      @include('inst.front.pages.blog2')
+
+@endsection
+
+{{-- Frontendda eng pastgi qismdagi blog yoki article fragmenti --}}
+@section('clent-section')
+     
+     @include('inst.front.pages.client-section')
 
 @endsection
 

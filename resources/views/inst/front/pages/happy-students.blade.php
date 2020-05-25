@@ -13,8 +13,8 @@
                         <!-- section title -->
                         <div class="section-title title-style-center_text">
                             <div class="title-header">
-                                <h5>why Uniaro</h5>
-                                <h2 class="title">Our Happy Students</h2>
+                                <h5>YOSHLAR ITTIFOQI</h5>
+                                <h2 class="title">Iqtidorli talabalar</h2>
                             </div>
                             <div class="heading-seperator"><span></span></div>
                         </div><!-- section title end -->

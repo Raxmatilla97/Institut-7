@@ -8,8 +8,8 @@
                 <!-- section title -->
                 <div class="section-title title-style-center_text">
                     <div class="title-header">
-                        <h5>Find The Right Instructor</h5>
-                        <h2 class="title">Our Expert Instructor</h2>
+                        <h5>Ovoz berish yo'li bilan anqilangan eng yaxshi o'qituvchilar</h5>
+                        <h2 class="title">Eng zo'r o'qituvchilar</h2>
                     </div>
                     <div class="heading-seperator"><span></span></div>
                 </div><!-- section title end -->
@@ -143,7 +143,7 @@
                 </div><!-- row end -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="mt-30 res-991-mt-20 mb_25 text-center"><p>Don’t hesitate, contact us for better help and services. <u><a href="home-3.html#"><strong>View more Instructor.</strong></a></u></p></div>
+                        <div class="mt-30 res-991-mt-20 mb_25 text-center"><p>O'qituvchilarning to'liq reytingini ko'rishingiz uchun <u><a href="home-3.html#"><strong>BU YERGA BOSING.</strong></a></u></p></div>
                     </div>
                 </div>
             </div>

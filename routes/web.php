@@ -15,12 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'front\IndexController@index')->name('index.site');
 
-
-
-
-Route::get('/test', function(){
-    return view('.inst.back.fragments.file-manager');
+Route::get('test', function () {
+    
+    return view('welcome');
 });
+
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 Route::prefix('/full-panel')->middleware(['role:developer'])->group(function () {
 
     route::get('/', 'admin\AdminPanelController@index')->name('admin');

@@ -12,28 +12,32 @@
                         <!-- section-title -->
                         <div class="section-title style2 clearfix">
                             <div class="title-header">
-                                <h5>OUR ARTICLES</h5>
-                                <h2 class="title">Latest News & Blog</h2>
+                                <h5>OTM AXBOROT XIZMATI</h5>
+                                <h2 class="title">OTM YANGILIKLARI</h2>
                             </div>
-                            <div class="title-desc">A comprehensive summary of the day’s most trending blog posts & news articles from the best Education websites on the web.</div>
+                            <div class="title-desc">Institutda bo'layotgan so'ngi yangilik va tadbirlarni bu yerda o'qishingiz mumkin. Yanayam ko'proq yangiliklarni ko'rish uchun <strong>Barcha yangiliklar</strong> tugmasidan foydalaning.</div>
                         </div><!-- section-title end -->
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-12">
-                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-dark mb-15 float-lg-right" href="index.html#">More News</a>
+                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-dark mb-15 float-lg-right" href="index.html#">Barcha yangiliklar</a>
                     </div>
                 </div><!-- row end -->
                 <!-- slick_slider -->
-                <div class="row slick_slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 2, "arrows":false, "autoplay":true, "infinite":true, "responsive": [{"breakpoint":1300,"settings":{"slidesToShow": 3}},{"breakpoint":950,"settings":{"slidesToShow": 2}}, {"breakpoint":540,"settings":{"slidesToShow": 1}}]}'>
+                <div class="row slick_slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "arrows":false, "autoplay":true, "infinite":true, "responsive": [{"breakpoint":1300,"settings":{"slidesToShow": 3}},{"breakpoint":950,"settings":{"slidesToShow": 2}}, {"breakpoint":540,"settings":{"slidesToShow": 1}}]}'>
+                   
+                    
+                    @foreach ($article as $item)
                     <div class="ttm-box-col-wrapper col-lg-4">
+                                                   
                         <!-- featured-imagebox-post -->
                         <div class="featured-imagebox featured-imagebox-post style1">
                             <div class="ttm-post-thumbnail featured-thumbnail"> 
-                                <img class="img-fluid lazyload" data-src="{{ asset('frontend/images/blog/blog-one-720x544.jpg')}}" alt="image">
+                                <img class="img-fluid lazyload" data-src="{{ route('index.site') }}/{{ $item->image }}" alt="image">
                             </div>
                             <div class="featured-content featured-content-post">
                                 <div class="ttm-box-post-date">
                                     <span class="ttm-entry-date">
-                                        <time class="entry-date" datetime="2019-08-12T08:47:17+00:00">12 August 2019</time>
+                                        <time class="entry-date" datetime="2019-08-12T08:47:17+00:00">{{ $item->created_at }}</time>
                                     </span>
                                 </div>
                                 <div class="post-meta">
@@ -41,139 +45,17 @@
                                     <span class="ttm-meta-line cat-link"><i class="fa fa-tag"></i>General Knowledge</span>
                                 </div>
                                 <div class="post-title featured-title">
-                                    <h5><a href="blog-single.html">I Turned A Challenge Into A Positive Thing</a></h5>
+                                    <h5><a href="blog-single.html">{{ $item->title }}</a></h5>
                                 </div>
                                 <div class="post-desc featured-desc">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,...</p>
+                                    <p>{{ Str::limit($item->description, 5, 10)  }}</p>
                                 </div>
                             </div>
                         </div><!-- featured-imagebox-post end-->
+                        
                     </div>
-                    <div class="ttm-box-col-wrapper col-lg-4">
-                        <!-- featured-imagebox-post -->
-                        <div class="featured-imagebox featured-imagebox-post style1">
-                            <div class="ttm-post-thumbnail featured-thumbnail"> 
-                                <img class="img-fluid lazyload" data-src="{{ asset('frontend/images/blog/blog-two-720x544.jpg')}}" alt="image"> 
-                            </div>
-                            <div class="featured-content featured-content-post">
-                                <div class="ttm-box-post-date">
-                                    <span class="ttm-entry-date">
-                                        <time class="entry-date" datetime="2019-08-11T08:45:16+00:00">11 August 2019</time>
-                                    </span>
-                                </div>
-                                <div class="post-meta">
-                                    <span class="ttm-meta-line"><i class="fa fa-user"></i>Admin</span>
-                                    <span class="ttm-meta-line"><i class="fa fa-tag"></i>Web Design</span>
-                                </div>
-                                <div class="post-title featured-title">
-                                    <h5><a href="blog-single.html">Choose The Right Place, At The Right Time</a></h5>
-                                </div>
-                                <div class="post-desc featured-desc">
-                                    <p>He found himself transformed in his bed into a horrible vermin.Ut enim ad minim veniam, quis nostrud exercitation ullamc...</p>
-                                </div>
-                            </div>
-                        </div><!-- featured-imagebox-post end-->
-                    </div>
-                    <div class="ttm-box-col-wrapper col-lg-4">
-                        <!-- featured-imagebox-post -->
-                        <div class="featured-imagebox featured-imagebox-post style1">
-                            <div class="ttm-post-thumbnail featured-thumbnail"> 
-                                <img class="img-fluid lazyload" data-src="{{ asset('frontend/images/blog/blog-three-720x544.jpg')}}" alt="image"> 
-                            </div>
-                            <div class="featured-content featured-content-post">
-                                <div class="ttm-box-post-date">
-                                    <span class="ttm-entry-date">
-                                        <time class="entry-date" datetime="2019-07-21T08:42:45+00:00">21 July 2019</time>
-                                    </span>
-                                </div>
-                                <div class="post-meta">
-                                    <span class="ttm-meta-line"><i class="fa fa-user"></i>Admin</span>
-                                    <span class="ttm-meta-line"><i class="fa fa-calendar"></i>Gmat Classes</span>
-                                </div>
-                                <div class="post-title featured-title">
-                                    <h5><a href="blog-single.html">Build Responsive Real World Websites</a></h5>
-                                </div>
-                                <div class="post-desc featured-desc">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaq...</p>
-                                </div>
-                            </div>
-                        </div><!-- featured-imagebox-post end-->
-                    </div>
-                    <div class="ttm-box-col-wrapper col-lg-4">
-                        <!-- featured-imagebox-post -->
-                        <div class="featured-imagebox featured-imagebox-post style1">
-                            <div class="ttm-post-thumbnail featured-thumbnail"> 
-                                <img class="img-fluid lazyload" data-src="{{ asset('frontend/images/blog/blog-four-720x544.jpg')}}" alt="image"> 
-                            </div>
-                            <div class="featured-content featured-content-post">
-                                <div class="ttm-box-post-date">
-                                    <span class="ttm-entry-date">
-                                        <time class="entry-date" datetime="2019-07-15T08:33:17+00:00">15 July 2019</time>
-                                    </span>
-                                </div>
-                                <div class="post-meta">
-                                    <span class="ttm-meta-line"><i class="fa fa-user"></i>Admin</span>
-                                    <span class="ttm-meta-line"><i class="fa fa-tag"></i>General Knowledge</span>
-                                </div>
-                                <div class="post-title featured-title">
-                                    <h5><a href="blog-single.html">Orientation Program For The New Students</a></h5>
-                                </div>
-                                <div class="post-desc featured-desc">
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti atque dolores etqw...</p>
-                                </div>
-                            </div>
-                        </div><!-- featured-imagebox-post end-->
-                    </div>
-                    <div class="ttm-box-col-wrapper col-lg-4">
-                        <!-- featured-imagebox-post -->
-                        <div class="featured-imagebox featured-imagebox-post style1">
-                            <div class="ttm-post-thumbnail featured-thumbnail"> 
-                                <img class="img-fluid lazyload" data-src="{{ asset('frontend/images/blog/blog-four-720x544.jpg')}}" alt="image"> 
-                            </div>
-                            <div class="featured-content featured-content-post">
-                                <div class="ttm-box-post-date">
-                                    <span class="ttm-entry-date">
-                                        <time class="entry-date" datetime="2019-07-15T08:33:17+00:00">15 July 2019</time>
-                                    </span>
-                                </div>
-                                <div class="post-meta">
-                                    <span class="ttm-meta-line"><i class="fa fa-user"></i>Admin</span>
-                                    <span class="ttm-meta-line"><i class="fa fa-tag"></i>General Knowledge</span>
-                                </div>
-                                <div class="post-title featured-title">
-                                    <h5><a href="blog-single.html">Orientation Program For The New Students</a></h5>
-                                </div>
-                                <div class="post-desc featured-desc">
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti atque dolores etqw...</p>
-                                </div>
-                            </div>
-                        </div><!-- featured-imagebox-post end-->
-                    </div>
-                    <div class="ttm-box-col-wrapper col-lg-4">
-                        <!-- featured-imagebox-post -->
-                        <div class="featured-imagebox featured-imagebox-post style1">
-                            <div class="ttm-post-thumbnail featured-thumbnail"> 
-                                <img class="img-fluid lazyload" data-src="{{ asset('frontend/images/blog/blog-four-720x544.jpg')}}" alt="image"> 
-                            </div>
-                            <div class="featured-content featured-content-post">
-                                <div class="ttm-box-post-date">
-                                    <span class="ttm-entry-date">
-                                        <time class="entry-date" datetime="2019-07-15T08:33:17+00:00">15 July 2019</time>
-                                    </span>
-                                </div>
-                                <div class="post-meta">
-                                    <span class="ttm-meta-line"><i class="fa fa-user"></i>Admin</span>
-                                    <span class="ttm-meta-line"><i class="fa fa-tag"></i>General Knowledge</span>
-                                </div>
-                                <div class="post-title featured-title">
-                                    <h5><a href="blog-single.html">Orientation Program For The New Students</a></h5>
-                                </div>
-                                <div class="post-desc featured-desc">
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesentium voluptatum deleniti atque dolores etqw...</p>
-                                </div>
-                            </div>
-                        </div><!-- featured-imagebox-post end-->
-                    </div>
+                    @endforeach
+                    
                 </div>
             </div>
         </section>

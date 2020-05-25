@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\front;
 
+use App\Article;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,12 @@ class IndexController extends Controller
     public function index()
     {
         
-        return view('layouts.front.makets.sayt-maket');
+
+        $article = Article::orderBy('updated_at', 'desc')->take(10)->get();
+
+        //dd($article);
+
+        return view('layouts.front.makets.sayt-maket', compact('article'));
         //return view('layouts.front.sayt-app');
     }
 

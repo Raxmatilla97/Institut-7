@@ -4,11 +4,6 @@
 @section('slider-banner')
 
 
-<style>
-
-
-
-</style>
 <div class="banner-slider slick_slider slick-arrows-style1" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows":true, "autoplay":true, "centerMode":true, "centerPadding":0, "infinite":true, "initialSlide":2, "responsive": [{"breakpoint":870,"settings":{"slidesToShow": 1}} , {"breakpoint":525,"settings":{"slidesToShow": 1}}]}'>
     <!-- banner-slide -->
     <div class="banner-slide">
@@ -20,7 +15,7 @@
                         <div class="col-lg-12">
                             <div class="banner-text ttm-textcolor-white text-center">
                                 <div class="logo-icon slideInUp animated mx-auto">
-                                    <img class="img-fluid d-inline-block lazyload " data-src="{{ asset('frontend/images/oq_logo.png') }}" style="width: 300px;">
+                                    <img class="img-fluid d-inline-block lazyload "  data-src="{{ asset('frontend/images/oq_logo.png') }}" style="width: 200px;">
                                 </div>
                                 <div class="slideInUp animated text font-weight-normal mt-10"><strong>OLD SITE:institut saytining eski versiyasini quyidagi havola orqali ishlatishingiz mumkin. <a href="#" ><span class="ttm-textcolor-skincolor">BU YERGA!</span></a></strong>  </div>  
                                 <div class="mt-10 mb-15">

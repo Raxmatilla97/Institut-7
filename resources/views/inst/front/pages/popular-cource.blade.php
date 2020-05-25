@@ -10,8 +10,8 @@
                     <!-- section title -->
                     <div class="section-title title-style-center_text">
                         <div class="title-header">
-                            <h5>YOU CAN LEARN IT</h5>
-                            <h2 class="title">Popular Courses Categories</h2>
+                            <h5>OTM AXBOROT XIZMATI</h5>
+                            <h2 class="title">OTM E'LONLARI</h2>
                         </div>
                         <div class="heading-seperator"><span></span></div>
                     </div><!-- section title end -->
@@ -149,7 +149,7 @@
             <!-- row -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="mt-30 res-991-mt-20 mb_25 text-center"><p>Don’t hesitate, contact us for better help and services. <u><a href="home-3.html#"><strong>Explore all Services.</strong></a></u></p></div>
+                    <div class="mt-30 res-991-mt-20 mb_25 text-center"><p>Yanada ko'proq e'lonlar bilan tanishish uchun <u><a href="home-3.html#"><strong>BU YERGA BOSING.</strong></a></u></p></div>
                 </div>
             </div><!-- row end -->
         </div>

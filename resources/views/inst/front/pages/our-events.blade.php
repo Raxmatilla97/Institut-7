@@ -10,8 +10,10 @@
                     <!-- section title -->
                     <div class="section-title title-style-center_text">
                         <div class="title-header">
-                            <h5>OUR EVENTS</h5>
-                            <h2 class="title">Our Upcoming Events</h2>
+                            <h5>OTM AXBOROT XIZMATI</h5>
+                            <h2 class="title">KONFERENSIYALAR</h2>
+                            <br>
+                            <h6>Konferensiyalarda qatnashish orqali o`z ilmiy salogiyatingizni yuksaltiring.</h6>
                         </div>
                         <div class="heading-seperator"><span></span></div>
                     </div><!-- section title end -->
@@ -116,7 +118,7 @@
             <!-- row -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="mt-20 mb_25 text-center"><p>Don’t hesitate, contact us for better help and services. <u><a href="home-3.html#">View More Events.</a></u></p></div>
+                    <div class="mt-20 mb_25 text-center"><p>Yanada ko'proq konferensiyalar haqida bilmoqchi bo'lsangiz <u><a href="home-3.html#">BU YERGA BOSING.</a></u></p></div>
                 </div>
             </div><!-- row end -->
         </div>

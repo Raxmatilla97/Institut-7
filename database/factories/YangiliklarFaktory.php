@@ -31,7 +31,9 @@ $factory->define(Article::class, function (Faker $faker) {
         
         'user_id' => User::all()->random()->id,
         'category_id' => ArticleCategory::all()->random()->id,
-        'slug' => $slug
+        'slug' => $slug,
+        'small' => $faker->text(),
+        
 
     ];
    
